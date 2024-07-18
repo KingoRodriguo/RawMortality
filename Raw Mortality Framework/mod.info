@@ -1,5 +1,0 @@
-name=RawMortalityFramework
-id=RawMortalityFramework
-description=Utility functions and framework required for Raw Mortality mods. Should be place on top of evert RM mods in load order.
-poster=poster.png
-icon=icon.png

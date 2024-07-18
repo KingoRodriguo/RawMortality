@@ -1,6 +1,5 @@
 name=RAW Mortaliy - Food May Kill
 id=RM_FMK
-require=RawMortalityFramework
 description=Include allergies and food intolerance to the game.
 poster=poster.png
 icon=icon.png
