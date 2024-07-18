@@ -12,6 +12,7 @@ end
 function applySymptom(player, effectName, symptoms)
     local modData = getPlayer():getModData()
     modData[effectName .. "Start"] = getGameTime():getWorldAgeHours()
+    getPlayer():Say(modData[effectName .. "Start"])
     
     for _, symptom in ipairs(symptoms) do
         local duration = symptom.duration or ZombRandFloat(symptom.minDuration or 1, symptom.maxDuration or 1)
