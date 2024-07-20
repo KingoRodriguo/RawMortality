@@ -27,7 +27,7 @@ function applySymptom(player, effectName, symptoms)
     -- Ajout de l'événement pour mettre à jour l'effet
     Events.EveryOneMinute.Add(function()
         updateSymptomEffect(player, effectName, symptoms)
-    end, "Update" .. effectName)
+    end
 end
 
 -- Fonction séparée pour mettre à jour un effet sur le joueur
