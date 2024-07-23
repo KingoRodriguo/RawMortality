@@ -1,9 +1,11 @@
-local _fileName = "RM_Diseases.lua"
+
 
 require "TimedActions/ISEatFoodAction"
+require "RM_Food"
 
 RM_Diseases = {
     Allergie = {    --Disease parameter setup
+        name = "Allergie",
         isFatal = true, --Can player die from this disease
         isPermanent = true, --Can this disease be cured
         isSymptomCurable = true, --Can drugs cure symptom of the disease
@@ -16,6 +18,7 @@ RM_Diseases = {
     },
 
     Intolerance = {
+        name = "Intolerance",
         isFatal = false,
         isPermanent = true,
         isSymptomCurable = true,
@@ -32,23 +35,23 @@ RM_Diseases = {
 }
 
 function getDisease(player, diseaseID)
-    local _funcName = string.format("getDisease(%s, %s)", tostring(player), tostring(diseaseID))
-    RMlog(_fileName, _funcName, "Entered function")
+    
+    
 
     local modData = player:getModData()
 
     -- Check for player.diseases
     if not modData.diseases then
-        RMlog(_fileName, _funcName, "player.diseases does not exist, creating it")
+        
         modData.diseases = {}
     end
 
     -- Add RM_Disease[diseaseID] to player.diseases if it doesn't exist
     if not modData.diseases[diseaseID] then
         modData.diseases[diseaseID] = RM_Diseases[diseaseID]
-        RMlog(_fileName, _funcName, "Added disease: " .. tostring(diseaseID))
+        
     else
-        RMlog(_fileName, _funcName, "Disease already exists: " .. tostring(diseaseID))
+        
     end
 
     return modData.diseases[diseaseID]
@@ -56,32 +59,45 @@ end
 
 
 function cureDisease(player, diseaseID)
-    local _funcName = string.format("cureDisease(%s, %s)", tostring(player), tostring(diseaseID))
-    RMlog(_fileName, _funcName, "Entered function")
+    
+    
 
     local modData = player:getModData()
 
-    -- Check if player.diseases contains diseaseID
+    if tostring(diseaseID) == "all" then
+        print("Removing all diseases")
+        for _, ID in pairs(modData.diseases) do
+            _name = ID.name
+            modData.diseases[_name] = nil
+            print("name: ".._name)
+        end
+        return
+    end
+    
     if modData.diseases and modData.diseases[diseaseID] then
         modData.diseases[diseaseID] = nil
-        RMlog(_fileName, _funcName, "Cured disease: " .. tostring(diseaseID))
+        
         print("Disease cured: " .. diseaseID)
     else
-        RMlog(_fileName, _funcName, "Disease not found: " .. tostring(diseaseID))
+        
         print("Disease not found: " .. diseaseID)
     end
 end
 
 
 function checkDisease(player)
-    local _funcName = "checkDisease(" .. tostring(player) .. ")"
-    RMlog(_fileName, _funcName, "Entered function")
+    
+    
+    if not player then
+        print("player nil")
+        return
+    end
 
     local modData = player:getModData()
 
     -- Check for player.diseases
     if not modData.diseases then
-        RMlog(_fileName, _funcName, "No diseases found")
+        
         player:Say("No diseases contracted.")
         return false
     end
@@ -97,24 +113,24 @@ end
 
 function applyAllergySymptoms(player)
     if player:getModData().diseases["Allergie"].isActive then 
-        local _funcName = string.format("applyAllergySymptoms(%s)", tostring(player))
-        RMlog(_fileName, _funcName, "Entered function")
+        
+        
 
         -- Apply random fatigue based on severity
         local randomFatigue = ZombRandFloat(0.1, 0.5)  -- Random value between 0.1 and 0.5 scaled by severity
         player:getStats():setFatigue(math.min(player:getStats():getFatigue() + randomFatigue, 1))
-        RMlog(_fileName, _funcName, "Applied fatigue: " .. tostring(randomFatigue))
+        
 
         -- Apply random pain based on severity
         local randomPain = ZombRandFloat(50, 80)  -- Random value between 0.1 and 0.5 scaled by severity
         local bodyPart = player:getBodyDamage():getBodyPart(BodyPartType.FromString("Torso_Lower"))
             bodyPart:setAdditionalPain(randomPain)
-        RMlog(_fileName, _funcName, "Applied pain: " .. tostring(randomPain))
+        
 
         -- Apply random sickness based on severity
         local randomSickness = ZombRandFloat(0.1, 0.5) -- Random value between 0.1 and 0.5 scaled by severity
         --player:getStats():setSickness(math.min(player:getStats():getSickness() + randomSickness, 1))
-        RMlog(_fileName, _funcName, "Applied sickness: " .. tostring(randomSickness))
+        
 
         local _currentFatigue = player:getStats():getFatigue()
         local _currentPain = player:getStats():getPain()
@@ -129,8 +145,143 @@ end
 function applyDiseaseSymptoms()
     local player = getPlayer()
 
-    if player:getModData().diseases["Allergie"].isActive then 
+    if player:getModData().diseases["Allergie"] and player:getModData().diseases["Allergie"].isActive then 
         applyAllergySymptoms(player)
+    end
+end
+
+
+function applyPlayerIntolerances(player, number)
+
+    local modData = player:getModData()
+
+    -- Check if player.diseases contains "Intolerance"
+    if not modData.diseases or not modData.diseases["Intolerance"] then
+        return
+    end
+
+    -- Get list of all unique ingredients in RM_Food
+    local IntolerancesList = {}
+    for foodID, foodData in pairs(RM_Food) do
+        if foodData.Ingredients then
+            for _, ingredient in pairs(foodData.Ingredients) do
+                if ingredient ~= "None" and not IntolerancesList[ingredient] then
+                    IntolerancesList[ingredient] = true
+                end
+            end
+        end
+    end
+
+    local uniqueIntolerances = {}
+    for ingredient, _ in pairs(IntolerancesList) do
+        table.insert(uniqueIntolerances, ingredient)
+    end
+
+    -- Choose a random number x between 1 and number, or 1 if number is < 1 or not a number
+    local x = ZombRand(1,number)
+    x = math.min(x, #uniqueIntolerances)
+
+    -- Add x intolerances to player.getModData().diseases["Intolerance"].Intolerances from uniqueIntolerances
+    if not modData.diseases["Intolerance"].Intolerances then
+        modData.diseases["Intolerance"].Intolerances = {}
+    end
+
+    local playerIntolerances = modData.diseases["Intolerance"].Intolerances
+    while #playerIntolerances < x do
+        local randomIndex = ZombRand(#uniqueIntolerances) + 1
+        local intolerance = table.remove(uniqueIntolerances, randomIndex)
+        table.insert(playerIntolerances, intolerance)
+    end
+end
+
+function applyPlayerAllergens(player, number)
+
+    local modData = player:getModData()
+
+    -- Check if player.diseases contains "Allergie"
+    if not modData.diseases or not modData.diseases["Allergie"] then
+        return
+    end
+
+    -- Get list of all unique allergens in RM_Food
+    local allergensList = {}
+    for foodID, foodData in pairs(RM_Food) do
+        if foodData.Allergens then
+            for _, allergen in pairs(foodData.Allergens) do
+                if allergen ~= "None" and not allergensList[allergen] then
+                    allergensList[allergen] = true
+                end
+            end
+        end
+    end
+
+    local uniqueAllergens = {}
+    for allergen, _ in pairs(allergensList) do
+        table.insert(uniqueAllergens, allergen)
+    end
+
+    -- Choose a random number x between 1 and number, or 1 if number is < 1 or not a number
+    local x = ZombRand(1,number)
+    x = math.min(x, #uniqueAllergens)
+
+    -- Add x allergens to player.getModData().diseases["Allergie"].Allergens from uniqueAllergens
+    if not modData.diseases["Allergie"].Allergens then
+        modData.diseases["Allergie"].Allergens = {}
+    end
+
+    local playerAllergens = modData.diseases["Allergie"].Allergens
+    while #playerAllergens < x do
+        local randomIndex = ZombRand(#uniqueAllergens) + 1
+        local allergen = table.remove(uniqueAllergens, randomIndex)
+        table.insert(playerAllergens, allergen)
+    end
+end
+
+function removePlayerAllergens(player)
+    local modData = player:getModData()
+
+    -- Check if player.diseases contains "Allergie"
+    if modData.diseases and modData.diseases["Allergie"] and modData.diseases["Allergie"].Allergens then
+        -- Remove all allergens
+        modData.diseases["Allergie"].Allergens = {}
+    end
+end
+
+function removePlayerIntolerances(player)
+    local modData = player:getModData()
+
+    -- Check if player.diseases contains "Intolerance"
+    if modData.diseases and modData.diseases["Intolerance"] and modData.diseases["Intolerance"].Intolerances then
+        -- Remove all intolerances
+        modData.diseases["Intolerance"].Intolerances = {}
+    else
+    end
+end
+
+function getPlayerAllergens(_player)
+    local modData = getPlayer():getModData()
+
+    -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
+    if modData.diseases and modData.diseases["Allergie"] and modData.diseases["Allergie"].Allergens then
+        local allergens = modData.diseases["Allergie"].Allergens
+        getPlayer():Say("Allergens: " ..table.concat(allergens, ", "))
+        return allergens
+    else
+        getPlayer():Say("Allergens: None")
+        return {"None"}
+    end
+end
+
+function getPlayerIntolerances(_player)
+    local modData = getPlayer():getModData()
+
+    -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
+    if modData.diseases and modData.diseases["Intolerance"] and modData.diseases["Intolerance"].Intolerances then
+        local Intolerances = modData.diseases["Intolerance"].Intolerances
+        return Intolerances
+    else
+        getPlayer():Say("Intolerances: None")
+        return {"None"}
     end
 end
 

@@ -1,5 +1,5 @@
 -- RM_Food.lua
-local _fileName = "RM_Food.lua"
+
 
 --Base food list
 RM_Food = {
@@ -20,7 +20,7 @@ RM_Food = {
 		},
 	},
 
-	Dogfood = { 
+	Dogfood = {
 		Ingredients = {
 			"Beef", 
 			"Wheat", 
@@ -35,7 +35,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedCornedBeefOpen = {
 		Ingredients = {
@@ -46,7 +45,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	CannedChiliOpen = {
 		Ingredients = {
@@ -68,7 +66,6 @@ RM_Food = {
 			"Spices",
 		},
 	},
-			
 
 	CannedBologneseOpen = {
 		Ingredients = {
@@ -89,7 +86,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedCarrotsOpen = {
 		Ingredients = {
@@ -100,7 +96,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedCornOpen = {
 		Ingredients = {
@@ -111,7 +106,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	CannedMushroomSoupOpen = {
 		Ingredients = {
@@ -132,7 +126,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	CannedPeasOpen = {
 		Ingredients = {
@@ -143,7 +136,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	CannedPotatoOpen = {
 		Ingredients = {
@@ -154,7 +146,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedSardinesOpen = {
 		Ingredients = {
@@ -165,7 +156,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	CannedTomatoOpen = {
 		Ingredients = {
@@ -176,7 +166,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	CannedCorn = {
 		Ingredients = {
@@ -187,7 +176,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	CannedMushroomSoup = {
 		Ingredients = {
@@ -208,7 +196,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	CannedPeas = {
 		Ingredients = {
@@ -219,7 +206,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	CannedPotato2 = {
 		Ingredients = {
@@ -230,7 +216,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedSardines = {
 		Ingredients = {
@@ -241,7 +226,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	CannedTomato2 = {
 		Ingredients = {
@@ -252,7 +236,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	CannedCarrots2 = {
 		Ingredients = {
@@ -263,7 +246,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedChili = {
 		Ingredients = {
@@ -285,7 +267,6 @@ RM_Food = {
 			"Spices",
 		},
 	},
-			
 
 	CannedBolognese = {
 		Ingredients = {
@@ -306,7 +287,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	CannedCornedBeef = {
 		Ingredients = {
@@ -317,7 +297,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	TinnedSoupOpen = {
 		Ingredients = {
@@ -337,7 +316,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	TinnedSoup = {
 		Ingredients = {
@@ -357,7 +335,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	TunaTinOpen = {
 		Ingredients = {
@@ -368,7 +345,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	OpenBeans = {
 		Ingredients = {
@@ -379,7 +355,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	TinnedBeans = {
 		Ingredients = {
@@ -390,7 +365,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	TunaTin = {
 		Ingredients = {
@@ -401,7 +375,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	CannedFruitCocktail = {
 		Ingredients = {
@@ -414,7 +387,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedFruitCocktailOpen = {
 		Ingredients = {
@@ -427,7 +399,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedFruitBeverage = {
 		Ingredients = {
@@ -439,7 +410,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedFruitBeverageOpen = {
 		Ingredients = {
@@ -451,7 +421,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedPeaches = {
 		Ingredients = {
@@ -462,7 +431,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedPeachesOpen = {
 		Ingredients = {
@@ -473,7 +441,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedPineapple = {
 		Ingredients = {
@@ -484,7 +451,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	CannedPineappleOpen = {
 		Ingredients = {
@@ -495,7 +461,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	MushroomGeneric1 = {
 		Ingredients = {
@@ -505,7 +470,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric2 = {
 		Ingredients = {
@@ -515,7 +479,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric3 = {
 		Ingredients = {
@@ -525,7 +488,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric4 = {
 		Ingredients = {
@@ -535,7 +497,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric5 = {
 		Ingredients = {
@@ -545,7 +506,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric6 = {
 		Ingredients = {
@@ -555,7 +515,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	MushroomGeneric7 = {
 		Ingredients = {
@@ -565,7 +524,6 @@ RM_Food = {
 			"Fungi",
 		},
 	},
-			
 
 	Onion = {
 		Ingredients = {
@@ -575,7 +533,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Lettuce = {
 		Ingredients = {
@@ -585,7 +542,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	BellPepper = {
 		Ingredients = {
@@ -595,7 +551,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Avocado = {
 		Ingredients = {
@@ -605,7 +560,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Zucchini = {
 		Ingredients = {
@@ -615,7 +569,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Peas = {
 		Ingredients = {
@@ -625,7 +578,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	Carrots = {
 		Ingredients = {
@@ -635,7 +587,6 @@ RM_Food = {
 			"Roots",
 		},
 	},
-			
 
 	Broccoli = {
 		Ingredients = {
@@ -645,7 +596,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Corn = {
 		Ingredients = {
@@ -655,7 +605,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Eggplant = {
 		Ingredients = {
@@ -665,7 +614,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 	Leek = {
 		Ingredients = {
@@ -675,7 +623,6 @@ RM_Food = {
 			"Vegetables",
 		},
 	},
-			
 
 
 	Lemon = {
@@ -686,7 +633,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryBlack = {
 		Ingredients = {
@@ -696,7 +642,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryBlue = {
 		Ingredients = {
@@ -706,7 +651,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryGeneric1 = {
 		Ingredients = {
@@ -716,7 +660,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryGeneric2 = {
 		Ingredients = {
@@ -726,7 +669,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryGeneric3 = {
 		Ingredients = {
@@ -736,7 +678,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryGeneric4 = {
 		Ingredients = {
@@ -746,7 +687,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryGeneric5 = {
 		Ingredients = {
@@ -756,7 +696,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	BerryPoisonIvy = {
 		Ingredients = {
@@ -766,7 +705,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Peach = {
 		Ingredients = {
@@ -776,7 +714,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Pineapple = {
 		Ingredients = {
@@ -786,7 +723,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Cherry = {
 		Ingredients = {
@@ -796,7 +732,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Watermelon = {
 		Ingredients = {
@@ -806,7 +741,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	WatermelonSliced = {
 		Ingredients = {
@@ -816,7 +750,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	WatermelonSmashed = {
 		Ingredients = {
@@ -826,7 +759,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Grapes = {
 		Ingredients = {
@@ -836,7 +768,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Orange = {
 		Ingredients = {
@@ -846,7 +777,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Apple = {
 		Ingredients = {
@@ -856,7 +786,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 	Banana = {
 		Ingredients = {
@@ -866,7 +795,6 @@ RM_Food = {
 			"Fruits",
 		},
 	},
-			
 
 
 	Catfish = {
@@ -877,7 +805,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Bass = {
 		Ingredients = {
@@ -887,7 +814,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Perch = {
 		Ingredients = {
@@ -897,7 +823,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Crappie = {
 		Ingredients = {
@@ -907,7 +832,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Panfish = {
 		Ingredients = {
@@ -917,7 +841,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Pike = {
 		Ingredients = {
@@ -927,7 +850,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Trout = {
 		Ingredients = {
@@ -937,7 +859,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	BaitFish = {
 		Ingredients = {
@@ -947,7 +868,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	DeadRat = {
 		Ingredients = {
@@ -957,7 +877,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	DeadMouse = {
 		Ingredients = {
@@ -967,7 +886,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	DeadRabbit = {
 		Ingredients = {
@@ -977,7 +895,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	DeadSquirrel = {
 		Ingredients = {
@@ -987,7 +904,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	DeadBird = {
 		Ingredients = {
@@ -997,7 +913,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	FishFillet = {
 		Ingredients = {
@@ -1007,7 +922,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Hotdog = {
 		Ingredients = {
@@ -1018,7 +932,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	MuttonChop = {
 		Ingredients = {
@@ -1028,7 +941,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	PorkChop = {
 		Ingredients = {
@@ -1038,7 +950,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Rabbitmeat = {
 		Ingredients = {
@@ -1048,7 +959,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Smallanimalmeat = {
 		Ingredients = {
@@ -1058,7 +968,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Smallbirdmeat = {
 		Ingredients = {
@@ -1068,7 +977,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	ChickenFried = {
 		Ingredients = {
@@ -1082,7 +990,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	MeatPatty = {
 		Ingredients = {
@@ -1092,7 +999,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	BeefJerky = {
 		Ingredients = {
@@ -1103,7 +1009,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Corndog = {
 		Ingredients = {
@@ -1118,7 +1023,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Tofu = {
 		Ingredients = {
@@ -1128,7 +1032,6 @@ RM_Food = {
 			"Soy",
 		},
 	},
-			
 
 	FrogMeat = {
 		Ingredients = {
@@ -1138,7 +1041,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Steak = {
 		Ingredients = {
@@ -1148,7 +1050,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Salmon = {
 		Ingredients = {
@@ -1158,7 +1059,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Egg = {
 		Ingredients = {
@@ -1168,7 +1068,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Chicken = {
 		Ingredients = {
@@ -1178,7 +1077,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Ham = {
 		Ingredients = {
@@ -1188,7 +1086,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	HamSlice = {
 		Ingredients = {
@@ -1198,7 +1095,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 
 	WaterBleachBottle = {
@@ -1210,7 +1106,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterBottleFull = {
 		Ingredients = {
@@ -1220,7 +1115,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterBowl = {
 		Ingredients = {
@@ -1230,7 +1124,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterMug = {
 		Ingredients = {
@@ -1240,7 +1133,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterTeacup = {
 		Ingredients = {
@@ -1250,7 +1142,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterMugRed = {
 		Ingredients = {
@@ -1260,7 +1151,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterMugWhite = {
 		Ingredients = {
@@ -1270,7 +1160,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterMugSpiffo = {
 		Ingredients = {
@@ -1280,7 +1169,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterPopBottle = {
 		Ingredients = {
@@ -1290,7 +1178,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterPot = {
 		Ingredients = {
@@ -1300,7 +1187,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterSaucepan = {
 		Ingredients = {
@@ -1310,7 +1196,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WhiskeyWaterFull = {
 		Ingredients = {
@@ -1322,7 +1207,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	BeerWaterFull = {
 		Ingredients = {
@@ -1336,7 +1220,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	Milk = {
 		Ingredients = {
@@ -1346,7 +1229,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CannedMilk = {
 		Ingredients = {
@@ -1356,7 +1238,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CannedMilkOpen = {
 		Ingredients = {
@@ -1366,7 +1247,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Bleach = {
 		Ingredients = {
@@ -1376,7 +1256,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	JuiceBox = {
 		Ingredients = {
@@ -1388,7 +1267,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterPotRice = {
 		Ingredients = {
@@ -1399,7 +1277,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterPotPasta = {
 		Ingredients = {
@@ -1410,7 +1287,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	HotDrinkTea = {
 		Ingredients = {
@@ -1421,7 +1297,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HotDrink = {
 		Ingredients = {
@@ -1431,7 +1306,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HotDrinkRed = {
 		Ingredients = {
@@ -1441,7 +1315,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ColdDrinkRed = {
 		Ingredients = {
@@ -1451,7 +1324,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HotDrinkWhite = {
 		Ingredients = {
@@ -1461,7 +1333,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ColdDrinkWhite = {
 		Ingredients = {
@@ -1471,7 +1342,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HotDrinkSpiffo = {
 		Ingredients = {
@@ -1481,7 +1351,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ColdDrinkSpiffo = {
 		Ingredients = {
@@ -1491,7 +1360,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterSaucepanRice = {
 		Ingredients = {
@@ -1502,7 +1370,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WaterSaucepanPasta = {
 		Ingredients = {
@@ -1513,7 +1380,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	WhiskeyFull = {
 		Ingredients = {
@@ -1525,7 +1391,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	SoupBowl = {
 		Ingredients = {
@@ -1535,7 +1400,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	StewBowl = {
 		Ingredients = {
@@ -1545,7 +1409,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	PotOfSoup = {
 		Ingredients = {
@@ -1555,7 +1418,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	PotOfSoupRecipe = {
 		Ingredients = {
@@ -1565,7 +1427,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	PotOfStew = {
 		Ingredients = {
@@ -1575,7 +1436,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	Pop = {
 		Ingredients = {
@@ -1587,7 +1447,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pop2 = {
 		Ingredients = {
@@ -1599,7 +1458,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pop3 = {
 		Ingredients = {
@@ -1611,7 +1469,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PopBottle = {
 		Ingredients = {
@@ -1623,7 +1480,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Mugfull = {
 		Ingredients = {
@@ -1633,7 +1489,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ColdCuppa = {
 		Ingredients = {
@@ -1643,7 +1498,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BeerCan = {
 		Ingredients = {
@@ -1657,7 +1511,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	BeerBottle = {
 		Ingredients = {
@@ -1671,7 +1524,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	Wine = {
 		Ingredients = {
@@ -1682,7 +1534,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	WineWaterFull = {
 		Ingredients = {
@@ -1692,7 +1543,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Wine2 = {
 		Ingredients = {
@@ -1703,7 +1553,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	Pancakes = {
 		Ingredients = {
@@ -1719,7 +1568,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PancakesCraft = {
 		Ingredients = {
@@ -1735,7 +1583,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PancakesRecipe = {
 		Ingredients = {
@@ -1751,7 +1598,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Waffles = {
 		Ingredients = {
@@ -1767,7 +1613,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	WafflesRecipe = {
 		Ingredients = {
@@ -1783,7 +1628,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Icecream = {
 		Ingredients = {
@@ -1798,7 +1642,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	IcecreamMelted = {
 		Ingredients = {
@@ -1813,7 +1656,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Candycane = {
 		Ingredients = {
@@ -1825,7 +1667,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Peppermint = {
 		Ingredients = {
@@ -1837,7 +1678,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Cereal = {
 		Ingredients = {
@@ -1850,7 +1690,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	CerealBowl = {
 		Ingredients = {
@@ -1865,7 +1704,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CookieChocolateChip = {
 		Ingredients = {
@@ -1882,7 +1720,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookieJelly = {
 		Ingredients = {
@@ -1899,7 +1736,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	SunflowerSeeds = {
 		Ingredients = {
@@ -1909,7 +1745,6 @@ RM_Food = {
 			"Seeds",
 		},
 	},
-			
 
 	MintCandy = {
 		Ingredients = {
@@ -1921,7 +1756,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Lollipop = {
 		Ingredients = {
@@ -1933,7 +1767,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CandyPackage = {
 		Ingredients = {
@@ -1943,7 +1776,6 @@ RM_Food = {
 			"Varies by candy",
 		},
 	},
-			
 
 	Popcorn = {
 		Ingredients = {
@@ -1955,7 +1787,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Cupcake = {
 		Ingredients = {
@@ -1973,7 +1804,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Chocolate = {
 		Ingredients = {
@@ -1985,7 +1815,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	WildGarlic2 = {
 		Ingredients = {
@@ -1995,7 +1824,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CommonMallow = {
 		Ingredients = {
@@ -2005,7 +1833,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	LemonGrass = {
 		Ingredients = {
@@ -2015,7 +1842,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BlackSage = {
 		Ingredients = {
@@ -2025,7 +1851,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Ginseng = {
 		Ingredients = {
@@ -2035,7 +1860,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Worm = {
 		Ingredients = {
@@ -2045,7 +1869,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Rosehips = {
 		Ingredients = {
@@ -2055,7 +1878,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GrapeLeaves = {
 		Ingredients = {
@@ -2065,7 +1887,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Violets = {
 		Ingredients = {
@@ -2075,7 +1896,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WildEggs = {
 		Ingredients = {
@@ -2085,7 +1905,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Cockroach = {
 		Ingredients = {
@@ -2095,7 +1914,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Cricket = {
 		Ingredients = {
@@ -2105,7 +1923,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Grasshopper = {
 		Ingredients = {
@@ -2115,7 +1932,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GrilledCheese = {
 		Ingredients = {
@@ -2128,7 +1944,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Salt = {
 		Ingredients = {
@@ -2138,7 +1953,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pepper = {
 		Ingredients = {
@@ -2148,7 +1962,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Dough = {
 		Ingredients = {
@@ -2161,7 +1974,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	DoughRolled = {
 		Ingredients = {
@@ -2174,7 +1986,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	BakingTrayBread = {
 		Ingredients = {
@@ -2187,7 +1998,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	BeanBowl = {
 		Ingredients = {
@@ -2199,7 +2009,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	Bread = {
 		Ingredients = {
@@ -2212,7 +2021,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Butter = {
 		Ingredients = {
@@ -2223,7 +2031,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Cheese = {
 		Ingredients = {
@@ -2235,7 +2042,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CheeseSandwich = {
 		Ingredients = {
@@ -2248,7 +2054,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Crisps = {
 		Ingredients = {
@@ -2260,7 +2065,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Crisps2 = {
 		Ingredients = {
@@ -2272,7 +2076,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Crisps3 = {
 		Ingredients = {
@@ -2284,7 +2087,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Crisps4 = {
 		Ingredients = {
@@ -2296,7 +2098,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PeanutButter = {
 		Ingredients = {
@@ -2307,7 +2108,6 @@ RM_Food = {
 			"Peanuts",
 		},
 	},
-			
 
 	PeanutButterSandwich = {
 		Ingredients = {
@@ -2319,7 +2119,6 @@ RM_Food = {
 			"Peanuts",
 		},
 	},
-			
 
 	Pie = {
 		Ingredients = {
@@ -2333,7 +2132,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PiePumpkin = {
 		Ingredients = {
@@ -2348,7 +2146,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Peanuts = {
 		Ingredients = {
@@ -2358,7 +2155,6 @@ RM_Food = {
 			"Peanuts",
 		},
 	},
-			
 
 	Ramen = {
 		Ingredients = {
@@ -2370,7 +2166,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	RamenBowl = {
 		Ingredients = {
@@ -2382,7 +2177,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	TVDinner = {
 		Ingredients = {
@@ -2392,7 +2186,6 @@ RM_Food = {
 			"Varies by recipe",
 		},
 	},
-			
 
 	EggCarton = {
 		Ingredients = {
@@ -2402,7 +2195,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Rice = {
 		Ingredients = {
@@ -2412,7 +2204,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pasta = {
 		Ingredients = {
@@ -2423,7 +2214,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	PastaPan = {
 		Ingredients = {
@@ -2434,7 +2224,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	RicePan = {
 		Ingredients = {
@@ -2445,7 +2234,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Coffee2 = {
 		Ingredients = {
@@ -2455,7 +2243,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Teabag2 = {
 		Ingredients = {
@@ -2465,7 +2252,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PastaPot = {
 		Ingredients = {
@@ -2476,7 +2262,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	RicePot = {
 		Ingredients = {
@@ -2487,7 +2272,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	RiceBowl = {
 		Ingredients = {
@@ -2497,7 +2281,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PastaBowl = {
 		Ingredients = {
@@ -2507,7 +2290,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	PiePrep = {
 		Ingredients = {
@@ -2521,7 +2303,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CakePrep = {
 		Ingredients = {
@@ -2538,7 +2319,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	FruitSalad = {
 		Ingredients = {
@@ -2548,7 +2328,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Oatmeal = {
 		Ingredients = {
@@ -2561,7 +2340,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Macandcheese = {
 		Ingredients = {
@@ -2575,7 +2353,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Honey = {
 		Ingredients = {
@@ -2585,7 +2362,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Sugar = {
 		Ingredients = {
@@ -2595,7 +2371,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Yoghurt = {
 		Ingredients = {
@@ -2606,7 +2381,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	BreadDough = {
 		Ingredients = {
@@ -2619,7 +2393,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	CakeSlice = {
 		Ingredients = {
@@ -2636,7 +2409,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	PanFriedVegetables = {
 		Ingredients = {
@@ -2648,7 +2420,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PanFriedVegetables2 = {
 		Ingredients = {
@@ -2660,7 +2431,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GriddlePanFriedVegetables = {
 		Ingredients = {
@@ -2672,7 +2442,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Mustard = {
 		Ingredients = {
@@ -2685,7 +2454,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Ketchup = {
 		Ingredients = {
@@ -2698,7 +2466,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Marinara = {
 		Ingredients = {
@@ -2712,7 +2479,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	OatsRaw = {
 		Ingredients = {
@@ -2722,7 +2488,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	PieWholeRaw = {
 		Ingredients = {
@@ -2736,7 +2501,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PieWholeRawSweet = {
 		Ingredients = {
@@ -2750,7 +2514,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CakeRaw = {
 		Ingredients = {
@@ -2767,7 +2530,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Processedcheese = {
 		Ingredients = {
@@ -2779,7 +2541,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Modjeska = {
 		Ingredients = {
@@ -2793,7 +2554,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	BreadSlices = {
 		Ingredients = {
@@ -2806,7 +2566,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Toast = {
 		Ingredients = {
@@ -2816,7 +2575,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Sandwich = {
 		Ingredients = {
@@ -2828,7 +2586,6 @@ RM_Food = {
 			"Varies by filling",
 		},
 	},
-			
 
 	BaguetteSandwich = {
 		Ingredients = {
@@ -2840,7 +2597,6 @@ RM_Food = {
 			"Varies by filling",
 		},
 	},
-			
 
 	Burger = {
 		Ingredients = {
@@ -2856,7 +2612,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	BurgerRecipe = {
 		Ingredients = {
@@ -2872,7 +2627,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Pizza = {
 		Ingredients = {
@@ -2888,7 +2642,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PizzaWhole = {
 		Ingredients = {
@@ -2904,7 +2657,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PizzaRecipe = {
 		Ingredients = {
@@ -2920,7 +2672,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Fries = {
 		Ingredients = {
@@ -2932,7 +2683,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pickles = {
 		Ingredients = {
@@ -2945,7 +2695,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BagelPlain = {
 		Ingredients = {
@@ -2958,7 +2707,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	BagelPoppy = {
 		Ingredients = {
@@ -2973,7 +2721,6 @@ RM_Food = {
 			"Seeds",
 		},
 	},
-			
 
 	BagelSesame = {
 		Ingredients = {
@@ -2988,7 +2735,6 @@ RM_Food = {
 			"Seeds",
 		},
 	},
-			
 
 	Baguette = {
 		Ingredients = {
@@ -3001,7 +2747,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	BaguetteDough  = {
 		Ingredients = {
@@ -3014,7 +2759,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 		Blackbeans = {
 		Ingredients = {
@@ -3024,7 +2768,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	Burrito = {
 		Ingredients = {
@@ -3040,7 +2783,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	CakeBlackForest = {
 		Ingredients = {
@@ -3058,7 +2800,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CakeCarrot = {
 		Ingredients = {
@@ -3075,7 +2816,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CakeCheeseCake = {
 		Ingredients = {
@@ -3091,7 +2831,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	CakeChocolate = {
 		Ingredients = {
@@ -3108,7 +2847,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CakeRedVelvet = {
 		Ingredients = {
@@ -3126,7 +2864,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CakeStrawberryShortcake = {
 		Ingredients = {
@@ -3143,7 +2880,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	ChickenFoot = {
 		Ingredients = {
@@ -3153,7 +2889,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	ChocolateChips = {
 		Ingredients = {
@@ -3163,7 +2898,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CocoaPowder = {
 		Ingredients = {
@@ -3173,7 +2907,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CookiesChocolate = {
 		Ingredients = {
@@ -3189,7 +2922,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookiesOatmeal = {
 		Ingredients = {
@@ -3206,7 +2938,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookiesShortbread = {
 		Ingredients = {
@@ -3219,7 +2950,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Croissant = {
 		Ingredients = {
@@ -3234,7 +2964,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Daikon = {
 		Ingredients = {
@@ -3244,7 +2973,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	DoughnutChocolate = {
 		Ingredients = {
@@ -3260,7 +2988,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	DoughnutFrosted = {
 		Ingredients = {
@@ -3276,7 +3003,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	DoughnutJelly = {
 		Ingredients = {
@@ -3292,7 +3018,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	DoughnutPlain = {
 		Ingredients = {
@@ -3307,7 +3032,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Edamame = {
 		Ingredients = {
@@ -3317,7 +3041,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	EggBoiled = {
 		Ingredients = {
@@ -3327,7 +3050,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	EggPoached = {
 		Ingredients = {
@@ -3337,7 +3059,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	EggOmelette = {
 		Ingredients = {
@@ -3351,7 +3072,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	EggScrambled = {
 		Ingredients = {
@@ -3364,7 +3084,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	FishRoe = {
 		Ingredients = {
@@ -3374,7 +3093,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	GingerPickled = {
 		Ingredients = {
@@ -3386,7 +3104,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Grapefruit = {
 		Ingredients = {
@@ -3396,7 +3113,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Hotsauce = {
 		Ingredients = {
@@ -3408,7 +3124,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Icing = {
 		Ingredients = {
@@ -3420,7 +3135,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Lime = {
 		Ingredients = {
@@ -3430,7 +3144,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Lobster = {
 		Ingredients = {
@@ -3440,7 +3153,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Maki = {
 		Ingredients = {
@@ -3453,7 +3165,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	MapleSyrup = {
 		Ingredients = {
@@ -3463,7 +3174,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	MeatDumpling = {
 		Ingredients = {
@@ -3476,7 +3186,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	MeatSteamBun = {
 		Ingredients = {
@@ -3490,7 +3199,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	MincedMeat = {
 		Ingredients = {
@@ -3500,7 +3208,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	MuffinFruit = {
 		Ingredients = {
@@ -3517,7 +3224,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	MuffinGeneric = {
 		Ingredients = {
@@ -3533,7 +3239,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	NoodleSoup = {
 		Ingredients = {
@@ -3547,7 +3252,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	OilOlive = {
 		Ingredients = {
@@ -3557,7 +3261,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	OilVegetable = {
 		Ingredients = {
@@ -3567,7 +3270,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Onigiri = {
 		Ingredients = {
@@ -3579,7 +3281,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Oysters = {
 		Ingredients = {
@@ -3589,7 +3290,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Pear = {
 		Ingredients = {
@@ -3599,7 +3299,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PepperHabanero = {
 		Ingredients = {
@@ -3609,7 +3308,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PepperJalapeno = {
 		Ingredients = {
@@ -3619,7 +3317,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	RefriedBeans = {
 		Ingredients = {
@@ -3631,7 +3328,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	RicePaper = {
 		Ingredients = {
@@ -3642,7 +3338,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	RiceVinegar = {
 		Ingredients = {
@@ -3653,7 +3348,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Sausage = {
 		Ingredients = {
@@ -3665,7 +3359,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Pepperoni = {
 		Ingredients = {
@@ -3678,7 +3371,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Seaweed = {
 		Ingredients = {
@@ -3688,7 +3380,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Shrimp = {
 		Ingredients = {
@@ -3698,7 +3389,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	ShrimpDumpling = {
 		Ingredients = {
@@ -3711,7 +3401,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	ShrimpFried = {
 		Ingredients = {
@@ -3724,7 +3413,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	ShrimpFriedCraft = {
 		Ingredients = {
@@ -3737,7 +3425,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Soysauce = {
 		Ingredients = {
@@ -3751,7 +3438,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Springroll = {
 		Ingredients = {
@@ -3763,7 +3449,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	SugarBrown = {
 		Ingredients = {
@@ -3773,7 +3458,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SushiEgg = {
 		Ingredients = {
@@ -3785,7 +3469,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	SushiFish = {
 		Ingredients = {
@@ -3797,7 +3480,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Taco = {
 		Ingredients = {
@@ -3813,7 +3495,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	TofuFried = {
 		Ingredients = {
@@ -3824,7 +3505,6 @@ RM_Food = {
 			"Soy",
 		},
 	},
-			
 
 	Tortilla = {
 		Ingredients = {
@@ -3836,7 +3516,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BurritoRecipe = {
 		Ingredients = {
@@ -3852,7 +3531,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	TortillaChips = {
 		Ingredients = {
@@ -3864,7 +3542,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Wasabi = {
 		Ingredients = {
@@ -3876,7 +3553,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Baloney = {
 		Ingredients = {
@@ -3889,7 +3565,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	BaloneySlice = {
 		Ingredients = {
@@ -3902,7 +3577,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Biscuit = {
 		Ingredients = {
@@ -3917,7 +3591,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 		Muffintray_Biscuit = {
 		Ingredients = {
@@ -3932,7 +3605,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Crackers = {
 		Ingredients = {
@@ -3945,7 +3617,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Cornbread = {
 		Ingredients = {
@@ -3962,7 +3633,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	FishFried = {
 		Ingredients = {
@@ -3976,7 +3646,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	GrahamCrackers = {
 		Ingredients = {
@@ -3989,7 +3658,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Gravy = {
 		Ingredients = {
@@ -4002,7 +3670,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Gum = {
 		Ingredients = {
@@ -4015,7 +3682,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	JamFruit = {
 		Ingredients = {
@@ -4027,7 +3693,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	JamMarmalade = {
 		Ingredients = {
@@ -4039,7 +3704,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Marshmallows = {
 		Ingredients = {
@@ -4052,7 +3716,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	OystersFried = {
 		Ingredients = {
@@ -4065,7 +3728,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	FriedOnionRings = {
 		Ingredients = {
@@ -4079,7 +3741,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	FriedOnionRingsCraft = {
 		Ingredients = {
@@ -4093,7 +3754,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	OnionRings = {
 		Ingredients = {
@@ -4107,7 +3767,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Salami = {
 		Ingredients = {
@@ -4119,7 +3778,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	SalamiSlice = {
 		Ingredients = {
@@ -4131,7 +3789,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	Smore = {
 		Ingredients = {
@@ -4144,7 +3801,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Squid = {
 		Ingredients = {
@@ -4154,7 +3810,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	SquidCalamari = {
 		Ingredients = {
@@ -4167,7 +3822,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	TacoShell = {
 		Ingredients = {
@@ -4179,7 +3833,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	TacoRecipe = {
 		Ingredients = {
@@ -4195,7 +3848,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	OmeletteRecipe = {
 		Ingredients = {
@@ -4209,7 +3861,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	BakingTray_Muffin = {
 		Ingredients = {
@@ -4225,7 +3876,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	BakingTray_Muffin_Recipe = {
 		Ingredients = {
@@ -4241,7 +3891,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Crayfish = {
 		Ingredients = {
@@ -4251,7 +3900,6 @@ RM_Food = {
 			"Seafood",
 		},
 	},
-			
 
 	Cone = {
 		Ingredients = {
@@ -4267,7 +3915,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	ConeIcecream = {
 		Ingredients = {
@@ -4280,7 +3927,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	ConeIcecreamToppings = {
 		Ingredients = {
@@ -4294,7 +3940,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	ConeIcecreamMelted = {
 		Ingredients = {
@@ -4307,7 +3952,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	GranolaBar = {
 		Ingredients = {
@@ -4321,7 +3965,6 @@ RM_Food = {
 			"Nuts",
 		},
 	},
-			
 
 	Mango = {
 		Ingredients = {
@@ -4331,7 +3974,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pumpkin = {
 		Ingredients = {
@@ -4341,7 +3983,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HalloweenPumpkin = {
 		Ingredients = {
@@ -4351,7 +3992,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ChickenNuggets = {
 		Ingredients = {
@@ -4364,7 +4004,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	DehydratedMeatStick = {
 		Ingredients = {
@@ -4376,7 +4015,6 @@ RM_Food = {
 			"Meat",
 		},
 	},
-			
 
 	CinnamonRoll = {
 		Ingredients = {
@@ -4393,7 +4031,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Guacamole = {
 		Ingredients = {
@@ -4407,7 +4044,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	LicoriceBlack = {
 		Ingredients = {
@@ -4419,7 +4055,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	LicoriceRed = {
 		Ingredients = {
@@ -4431,7 +4066,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Painauchocolat = {
 		Ingredients = {
@@ -4447,7 +4081,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	Perogies = {
 		Ingredients = {
@@ -4462,7 +4095,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PotatoPancakes = {
 		Ingredients = {
@@ -4476,7 +4108,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	SackProduce_Apple = {
 		Ingredients = {
@@ -4486,7 +4117,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_BellPepper = {
 		Ingredients = {
@@ -4496,7 +4126,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Broccoli = {
 		Ingredients = {
@@ -4506,7 +4135,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Cabbage = {
 		Ingredients = {
@@ -4516,7 +4144,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Carrot = {
 		Ingredients = {
@@ -4526,7 +4153,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Cherry = {
 		Ingredients = {
@@ -4536,7 +4162,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Corn = {
 		Ingredients = {
@@ -4546,7 +4171,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Eggplant = {
 		Ingredients = {
@@ -4556,7 +4180,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Grapes = {
 		Ingredients = {
@@ -4566,7 +4189,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Leek = {
 		Ingredients = {
@@ -4576,7 +4198,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Lettuce = {
 		Ingredients = {
@@ -4586,7 +4207,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Onion = {
 		Ingredients = {
@@ -4596,7 +4216,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Peach = {
 		Ingredients = {
@@ -4606,7 +4225,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Pear = {
 		Ingredients = {
@@ -4616,7 +4234,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Potato = {
 		Ingredients = {
@@ -4626,7 +4243,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_RedRadish = {
 		Ingredients = {
@@ -4636,7 +4252,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Strawberry = {
 		Ingredients = {
@@ -4646,7 +4261,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SackProduce_Tomato = {
 		Ingredients = {
@@ -4656,7 +4270,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 		DriedBlackBeans = {
 		Ingredients = {
@@ -4666,7 +4279,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	DriedChickpeas = {
 		Ingredients = {
@@ -4676,7 +4288,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	DriedKidneyBeans = {
 		Ingredients = {
@@ -4686,7 +4297,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	DriedLentils = {
 		Ingredients = {
@@ -4696,7 +4306,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	DriedSplitPeas = {
 		Ingredients = {
@@ -4706,7 +4315,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	DriedWhiteBeans = {
 		Ingredients = {
@@ -4716,7 +4324,6 @@ RM_Food = {
 			"Legumes",
 		},
 	},
-			
 
 	Pretzel = {
 		Ingredients = {
@@ -4729,7 +4336,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	Allsorts = {
 		Ingredients = {
@@ -4743,7 +4349,6 @@ RM_Food = {
 			"Gluten",
 		},
 	},
-			
 
 	BouillonCube = {
 		Ingredients = {
@@ -4757,7 +4362,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CandyCorn = {
 		Ingredients = {
@@ -4772,7 +4376,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Acorn = {
 		Ingredients = {
@@ -4782,7 +4385,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BeautyBerry = {
 		Ingredients = {
@@ -4792,7 +4394,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Dandelions = {
 		Ingredients = {
@@ -4802,7 +4403,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Basil = {
 		Ingredients = {
@@ -4812,7 +4412,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Chives = {
 		Ingredients = {
@@ -4822,7 +4421,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Cilantro = {
 		Ingredients = {
@@ -4832,7 +4430,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Oregano = {
 		Ingredients = {
@@ -4842,7 +4439,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Parsley = {
 		Ingredients = {
@@ -4852,7 +4448,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Rosemary = {
 		Ingredients = {
@@ -4862,7 +4457,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Sage = {
 		Ingredients = {
@@ -4872,7 +4466,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Thyme = {
 		Ingredients = {
@@ -4882,7 +4475,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HollyBerry = {
 		Ingredients = {
@@ -4892,7 +4484,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Nettles = {
 		Ingredients = {
@@ -4902,7 +4493,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GingerRoot = {
 		Ingredients = {
@@ -4912,7 +4502,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Thistle = {
 		Ingredients = {
@@ -4922,7 +4511,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WinterBerry = {
 		Ingredients = {
@@ -4932,7 +4520,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	AmericanLadyCaterpillar = {
 		Ingredients = {
@@ -4942,7 +4529,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	BandedWoolyBearCaterpillar = {
 		Ingredients = {
@@ -4952,7 +4538,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Centipede = {
 		Ingredients = {
@@ -4962,7 +4547,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Centipede2 = {
 		Ingredients = {
@@ -4972,7 +4556,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Maggots = {
 		Ingredients = {
@@ -4982,7 +4565,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Maggots2 = {
 		Ingredients = {
@@ -4992,7 +4574,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Millipede = {
 		Ingredients = {
@@ -5002,7 +4583,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Millipede2 = {
 		Ingredients = {
@@ -5012,7 +4592,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	MonarchCaterpillar = {
 		Ingredients = {
@@ -5022,7 +4601,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Pillbug = {
 		Ingredients = {
@@ -5032,7 +4610,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SawflyLarva = {
 		Ingredients = {
@@ -5042,7 +4619,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SilkMothCaterpillar = {
 		Ingredients = {
@@ -5052,7 +4628,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SwallowtailCaterpillar = {
 		Ingredients = {
@@ -5062,7 +4637,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Termites = {
 		Ingredients = {
@@ -5072,7 +4646,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Slug = {
 		Ingredients = {
@@ -5082,7 +4655,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Slug2 = {
 		Ingredients = {
@@ -5092,7 +4664,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Snail = {
 		Ingredients = {
@@ -5102,7 +4673,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Lunchbag = {
 		Ingredients = {
@@ -5112,7 +4682,6 @@ RM_Food = {
 			"Varies by contents",
 		},
 	},
-			
 
 	Lard = {
 		Ingredients = {
@@ -5122,7 +4691,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Margarine = {
 		Ingredients = {
@@ -5134,7 +4702,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	SugarPacket = {
 		Ingredients = {
@@ -5144,7 +4711,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CandyFruitSlices = {
 		Ingredients = {
@@ -5158,7 +4724,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	ChocolateCoveredCoffeeBeans = {
 		Ingredients = {
@@ -5170,7 +4735,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	GummyBears = {
 		Ingredients = {
@@ -5184,7 +4748,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GummyWorms = {
 		Ingredients = {
@@ -5198,7 +4761,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	HardCandies = {
 		Ingredients = {
@@ -5210,7 +4772,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	JellyBeans = {
 		Ingredients = {
@@ -5224,7 +4785,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	Jujubes = {
 		Ingredients = {
@@ -5237,7 +4797,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	RockCandy = {
 		Ingredients = {
@@ -5248,7 +4807,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	CookiesSugar = {
 		Ingredients = {
@@ -5263,7 +4821,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CornFrozen = {
 		Ingredients = {
@@ -5273,7 +4830,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	MixedVegetables = {
 		Ingredients = {
@@ -5286,7 +4842,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PieApple = {
 		Ingredients = {
@@ -5301,7 +4856,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PieBlueberry = {
 		Ingredients = {
@@ -5316,7 +4870,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	PieKeyLime = {
 		Ingredients = {
@@ -5332,7 +4885,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	PieLemonMeringue = {
 		Ingredients = {
@@ -5348,7 +4900,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	ChocoCakes = {
 		Ingredients = {
@@ -5364,7 +4915,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	HiHis = {
 		Ingredients = {
@@ -5380,7 +4930,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Plonkies = {
 		Ingredients = {
@@ -5396,7 +4945,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	SnoGlobes = {
 		Ingredients = {
@@ -5412,7 +4960,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	QuaggaCakes = {
 		Ingredients = {
@@ -5428,7 +4975,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	Beverage = {
 		Ingredients = {
@@ -5438,7 +4984,6 @@ RM_Food = {
 			"Varies by beverage",
 		},
 	},
-			
 
 	Beverage2 = {
 		Ingredients = {
@@ -5448,7 +4993,6 @@ RM_Food = {
 			"Varies by beverage",
 		},
 	},
-			
 
 	CookieChocolateChipDough = {
 		Ingredients = {
@@ -5464,7 +5008,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookiesChocolateDough = {
 		Ingredients = {
@@ -5480,7 +5023,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookiesOatmealDough = {
 		Ingredients = {
@@ -5496,7 +5038,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	CookiesShortbreadDough = {
 		Ingredients = {
@@ -5509,7 +5050,6 @@ RM_Food = {
 			"Dairy",
 		},
 	},
-			
 
 	CookiesSugarDough = {
 		Ingredients = {
@@ -5524,7 +5064,6 @@ RM_Food = {
 			"Eggs",
 		},
 	},
-			
 
 	GlassWineWater = {
 		Ingredients = {
@@ -5534,7 +5073,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	GlassTumblerWater = {
 		Ingredients = {
@@ -5544,7 +5082,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	PlasticCupWater = {
 		Ingredients = {
@@ -5554,7 +5091,6 @@ RM_Food = {
 			"None",
 		},
 	},
-			
 
 	WineInGlass = {
 		Ingredients = {
@@ -5564,7 +5100,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	Beer = {
 		Ingredients = {
@@ -5578,7 +5113,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	Beer2 = {
 		Ingredients = {
@@ -5592,7 +5126,6 @@ RM_Food = {
 			"Alcohol",
 		},
 	},
-			
 
 	TomatoPaste = {
 		Ingredients = {
@@ -5614,5 +5147,122 @@ RM_Food = {
         Ingredients = { "SimulatedIntolerance" },
         Allergens = { "None" },
     },
-			
 }
+
+function getIngredients(foodID)
+
+    ingredients = {"Unknown"}
+    -- Check if RM_Food[foodID] exists
+    if RM_Food[foodID] then
+        -- Check if RM_Food[foodID].Ingredients exists
+        if RM_Food[foodID].Ingredients then
+            ingredients = RM_Food[foodID].Ingredients
+        end
+    end
+
+    return ingredients
+end
+
+function setIngredients(foodID, items)
+    RM_Food[foodID].Ingredients = items
+end
+
+function addIngredients(foodID, items)
+    table.insert(RM_Food[foodID].Ingredients, items)
+end
+
+function removeIngredients(foodID, items)
+    RM_Food[foodID].Ingredients[items] = nil
+end
+
+function getAllergens(foodID)
+    
+
+    allergens = {"Unknown"}
+    -- Check if RM_Food[foodID] exists
+    if RM_Food[foodID] then
+        -- Check if RM_Food[foodID].Allergens exists
+        if RM_Food[foodID].Allergens then
+            allergens = RM_Food[foodID].Allergens
+        end
+    end
+
+    return allergens
+end
+
+function setAllergens(foodID, items)
+    RM_Food[foodID].Allergens = items
+end
+
+function addAllergens(foodID, items)
+    table.insert(RM_Food[foodID].Allergens, items)
+end
+
+function removeAllergens(foodID, items)
+    RM_Food[foodID].Allergens[items] = nil
+end
+
+function addItems_RMFood(foodItems, override)
+    override = override or false
+    for _, foodID in pairs(foodItems) do
+        if not RM_Food[foodID] then
+            RM_Food[foodID] = {Ingredients = {}, Allergens = {}}
+        elseif override then
+            RM_Food[foodID] = {Ingredients = {}, Allergens = {}}
+        end
+    end
+    return foodItems
+end
+
+function removeItems_RMFood(foodItems)
+    for _, foodID in pairs(foodItems) do
+        if RM_Food[foodID] then
+            RM_Food[foodID] = nil
+        end
+    end
+    return foodItems
+end
+
+function checkIngredients(foodIDs, ingredients)
+
+    local content = 0
+
+    for _, foodID in pairs(foodIDs) do
+        if RM_Food[foodID] and RM_Food[foodID].Ingredients then
+            for _, _ingredient in pairs(RM_Food[foodID].Ingredients) do
+                for _, ingredient in pairs(ingredients) do
+                    if _ingredient == ingredient then
+                        content = content + 1
+                    end
+                end
+            end
+			return content
+        end
+    end
+end
+
+function checkAllergens(foodIDs, allergens)
+ 
+    local content = 0
+
+    for _, foodID in pairs(foodIDs) do
+        if RM_Food[foodID] and RM_Food[foodID].Allergens then
+            for _, _allergen in pairs(RM_Food[foodID].Allergens) do
+                for _, allergen in pairs(allergens) do
+                    if _allergen == allergen then
+                        content = content + 1
+                    end
+                end
+            end
+        end
+		return content
+    end
+end
+
+function isFoodPackaged(foodItem)
+    if instanceof(foodItem, "Food") then
+        return foodItem:isPackaged()
+    else
+        return false
+    end
+end
