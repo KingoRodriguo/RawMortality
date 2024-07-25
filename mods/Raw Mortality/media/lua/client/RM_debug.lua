@@ -11,7 +11,7 @@ _defaultTexture = "media/textures/_IsoObjInspect.png"
 debugMenu = {
     _Option6 = {
         DisplayName = "UI",
-        func = function() openFoodLabelUI() end,
+        func = function() openFoodLabel(placeHolderItem) end,
         texture = _defaultTexture,             
     },
     _Main = { 

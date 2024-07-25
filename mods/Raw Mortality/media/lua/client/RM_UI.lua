@@ -1,3 +1,5 @@
+--Todo: add Ingredients Panel
+
 local dvNotice = "* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice."
 
 -- weight in kilogram
@@ -6,7 +8,7 @@ local mg = 10^(-6) -- milligram
 local mcg = 10^(-9) -- microgram
 
 -- Exemple d'utilisation
-local item = {
+local placeHolderItem = {
     DisplayName = "Canned Bolognese",
     Weight = 0.8,
     Calorie = 640,
@@ -43,15 +45,15 @@ local item = {
         },
     },
     Ingredients = {
-        "Tomatoes",
-        "Beef",
-        "Onion",
-        "Cornstarch",
-        "Salt",
-        "Wheat Flour",
-        "Carrots",
-        "Paprika",
-        "Spaghetti",
+        {name = "Tomatoes", qty = 200 * g},
+        {name = "Beef", qty = 150 * g},
+        {name = "Spaghetti", qty = 100 * g},
+        {name = "Carrots", qty = 60 * g},
+        {name = "Onion", qty = 50 * g},
+        {name = "Wheat Flour", qty = 20 * g,},
+        {name = "Cornstarch", qty = 10 * g},
+        {name = "Salt", qty = 5 * g},
+        {name = "Paprika", qty = 5 * g},
     },
     Allergens = {
         "Tomatoes",
@@ -60,6 +62,7 @@ local item = {
         "Roots",
     },
 }
+
 
 local dailyValue = {
     Macro = {
@@ -210,6 +213,12 @@ local dailyValue = {
     },
 }
 
+function ISSimpleUI:setBorderNamedElements(v)
+    for index, value in pairs(self.namedElements) do
+        value:setBorder(v)
+    end
+end
+
 local function roundToPercent(value)
     return math.floor((value * 1000) + 0.5) / 10
 end
@@ -232,12 +241,6 @@ local function getSmallestUnit(weight)
     end
     modifiedWeight = math.floor((modifiedWeight*10)+0.5)/10
     return modifiedWeight, unit
-end
-
-function ISSimpleUI:setBorderNamedElements(v)
-    for index, value in pairs(self.namedElements) do
-        value:setBorder(v)
-    end
 end
 
 local function FoodLabelUI(food)
@@ -264,7 +267,7 @@ local function FoodLabelUI(food)
     UI:nextLine()
     -- Divider
     if not food.Nutrients then 
-        food = item
+        food = placeHolderItem
     end
 
     for category, nutrients in pairs(food.Nutrients) do
@@ -298,18 +301,40 @@ local function FoodLabelUI(food)
 
     UI:addEmpty()
     UI:nextLine()
+
+    local ingredients = ""
+    for _, ingredient in ipairs(food.Ingredients) do
+        if #ingredients ~= 0 then
+            ingredients = ingredients .. ", "
+        end
+        local roundedValue = roundToPercent(ingredient.qty/food.Weight)
+        local percent =  ""
+        if roundedValue < 1 then
+            percent = "(<1 %)"
+        else
+            percent = "("..roundedValue.." %)"
+        end
+        ingredients = ingredients .. "" .. ingredient.name .. " " ..percent
+    end
+    local s = "<LEFT><SIZE:medium>Ingredients: " .. ingredients
+
     UI:addEmpty()
-    UI:addRichText("", dvNotice, "Medium")
+    UI:addRichText("", s)
     UI:addEmpty()
 
-    UI:setColumnWidthPixel(1, (UI.pxlW/10))
-    UI:setColumnWidthPixel(2, ((UI.pxlW/10*8)))
-    UI:setColumnWidthPixel(3, (UI.pxlW/10))
+    UI:setColumnWidthPixel(1, 20)
+    UI:setColumnWidthPixel(2, UI.pxlW - 40)
+    UI:setColumnWidthPixel(3, 20)
+
+    UI:nextLine()
+    UI:addEmpty()
+    UI:nextLine()
+    UI:addText("", "Allergy Advice : For Allergens, see ingredient in ")
 
     UI:saveLayout()
 end
 
 -- Appel de la fonction
 function openFoodLabel(food)
-    FoodLabelUI(food or item)
+    FoodLabelUI(food or placeHolderItem)
 end

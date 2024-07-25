@@ -1,0 +1,20 @@
+VERSION = 1,
+
+mods
+{
+	mod = ModManager,
+	mod = UIAPI,
+	mod = CommunityModdingDebugTools,
+	mod = CommunityModdingFrameworks,
+	mod = ModComparer,
+	mod = ModManagerELO,
+	mod = ModManagerLoadFromCollection,
+	mod = ModManagerLoadOrderSorter,
+	mod = BION_PlainMoodles,
+	mod = CommunityModdingPatch,
+	mod = Raw_Mortality,
+}
+
+maps
+{
+}
