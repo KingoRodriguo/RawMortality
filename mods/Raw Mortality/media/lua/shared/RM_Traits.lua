@@ -52,7 +52,6 @@ local RM_Traits = {
 
 --Trait initialiaztion
 function initRMTraits()
-    
 
     if not RM_Traits or type(RM_Traits) ~= "table" then
         
@@ -75,23 +74,16 @@ function initRMTraits()
                 end
 
                 TraitFactory.addTrait(_type, _name, _cost, _desc, _profession, _removeInMP)
-                
-            else
-                
             end
-        else
-            
         end
     end
 
-    
 end
 
 
 --Function to get RM_Traits[traitID].parameter
 --Return false on error else return RM_Traits[traitID].parameter
 function getRMTraitParameter(traitID, parameter)
-    
 
     return RM_Traits[traitID].parameter or false
 end
@@ -99,7 +91,6 @@ end
 --Function to set RM_Traits[traitID].parameter
 --Return false on error else return RM_Traits[traitID].parameter
 function setRMTraitParameter(traitID, parameter, value)
-    
 
     RM_Traits[traitID].parameter = value or RM_Traits["Default"].parameter
 
@@ -109,8 +100,7 @@ end
 --Function to define RM_Traits[traitID] with traitDefinition
 --Return false on error else return RM_Traits[traitID]
 function setRMTraitDefinition(traitID, traitDefinition)
-    
-    
+
     RM_Traits[traitID] = traitDefinition
     return RM_Traits[traitID] or false
 end
@@ -118,13 +108,11 @@ end
 --Function to remove RM_Traits[traitID]
 --return false on error else return true
 function removeRMTraitDefinition(traitID)
-    
-    
+
     if RM_Traits[traitID] then
         RM_Traits[traitID] = nil
 
         if RM_Traits[traitID] then
-            
             return false
         end
     end
@@ -148,19 +136,13 @@ function checkTraitDiseases(player)
             if RM_Diseases[diseaseID] then
                 
                 getDisease(player, diseaseID)
-            else
-                
             end
-        else
-            
         end
     end
 end
 
 -- Hook into the player creation event
 local function onPlayerCreate(playerIndex, player)
-    
-    
     checkTraitDiseases(player)
 end
 

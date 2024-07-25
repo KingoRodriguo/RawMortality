@@ -1,5 +1,6 @@
 require "RM_debugUtils"
 require "RM_Diseases"
+require "RM_UI"
 
 _defaultTexture = "media/textures/_IsoObjInspect.png"
 
@@ -8,6 +9,11 @@ _defaultTexture = "media/textures/_IsoObjInspect.png"
 --////////////////////////////////////////////////////////////////////
 
 debugMenu = {
+    _Option6 = {
+        DisplayName = "UI",
+        func = function() openFoodLabelUI() end,
+        texture = _defaultTexture,             
+    },
     _Main = { 
         DisplayName = "Raw Mortality",
         func = function() return nil end,
@@ -82,7 +88,22 @@ debugMenu = {
     
                 subs = {},                    
             },
+
+            _Option6 = {
+                DisplayName = "UI",
+                func = function() return nil end,
+                texture = _defaultTexture,
+    
+                subs = {
+                    _Option1 = {
+                        DisplayName = "Open Food UI",
+                        func = function() UITest() end,
+                        texture = _defaultTexture,
             
+                        subs = {},                    
+                    },
+                },                    
+            },
         },
 
     },

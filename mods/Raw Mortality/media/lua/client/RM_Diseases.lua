@@ -305,5 +305,4 @@ function ISEatFoodAction:perform()
     end
 end
 
-
-Events.EveryOneMinute.Add(applyDiseaseSymptoms)
+Events.EveryTenMinutes.Add(applyDiseaseSymptoms)

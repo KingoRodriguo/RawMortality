@@ -3,4 +3,5 @@ id=Raw_Mortality
 description=Include allergies and food intolerance to the game.
 poster=poster.png
 icon=icon.png
+require=UIAPI
 version=0.1

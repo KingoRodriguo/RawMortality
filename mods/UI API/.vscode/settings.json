@@ -1,18 +1,5 @@
 {
-    "Lua.diagnostics.globals": [
-        "getIngredients",
-        "setIngredients",
-        "addIngredients",
-        "removeIngredients",
-        "getAllergens",
-        "setAllergens",
-        "addAllergens",
-        "removeAllergens",
-        "addItems_RMFood",
-        "removeItems_RMFood",
-        "initRMTraits",
-        "getRMTraitParameter"
-    ],
+    "Lua.codeLens.enable": false,
     "Lua.workspace.library": [
         "C:/Users/rodri/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/umbrella/module/library"
     ],
@@ -29,9 +16,5 @@
         "io": "disable",
         "package": "disable"
     },
-    "Lua.workspace.checkThirdParty": false,
-    "Lua.diagnostics.disable": [
-        "lowercase-global",
-        "duplicate-set-field"
-    ]
+    "Lua.workspace.checkThirdParty": false
 }

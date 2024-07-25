@@ -1,6 +1,6 @@
 require "RM_Food"
 require "RM_Utils"
-
+--[[ Scrapped for new UI
 local oldRender = ISToolTipInv.render -- method caching
 
 function ISToolTipInv:render() -- render() override
@@ -12,7 +12,7 @@ function ISToolTipInv:render() -- render() override
         local ingredientList = RM_Food[self.item:getType()].Ingredients or {"nul", "nul"}
         local allergenList = RM_Food[self.item:getType()].Allergens or {"none"}
 
-        -- Fonction pour ajouter un retour à la ligne à la dernière virgule avant de dépasser
+        -- Cut text to tooltip width
         local function wrapText(text, maxWidth, font)
             local lines = {}
             local currentLine = ""
@@ -42,7 +42,7 @@ function ISToolTipInv:render() -- render() override
         -- drawRectBorder() override
         self.drawRectBorder = function(self, ...)
             local font = UIFont[getCore():getOptionTooltipFont()]
-            local current_height = self.tooltip:getHeight() - 6 -- Avoid too much distance from the other item's details
+            local current_height = self.tooltip:getHeight() -- Avoid too much distance from the other item's details
             local current_width = self.tooltip:getWidth()
 
             -- Draw Ingredients
@@ -67,3 +67,4 @@ function ISToolTipInv:render() -- render() override
     self.setHeight = oldSetHeight
     self.drawRectBorder = oldDrawRectBorder
 end
+]]--

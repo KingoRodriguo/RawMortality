@@ -1,0 +1,44 @@
+--Todo : player health damage for diseases
+
+--////////////////////////////////////////////////////////////////////
+-- Planned features
+--////////////////////////////////////////////////////////////////////
+
+----------------------------------------------------------------------
+-- Disease : Allergie
+----------------------------------------------------------------------
+--
+-- Food allergie, strong reaction to eating allergenic food
+--
+--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--
+-- Symptom(s)
+--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--
+--
+--  Fatigue --> Increase
+--  Pain --> Increase Torso_Lower
+--  Sickness --> Increase
+--  Stress -->  Increase
+--  Unhapiness --> Incresse
+--
+--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--
+-- Treatment(s)
+--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--
+--
+-- Epipen:
+--      Stop up to severe symptoms progression
+--      Mild Head Pain for some minutes
+--      Slowness for some minutes
+--      Weakness for some minutes
+--      safe for non medical emergency
+--
+-- Antihistaminic pills:
+--      stop up to medium symptoms progression
+--      cause fatigue
+--      cause head pain
+--      cause weight gain
+--      cause mild drunkness
+--
+-- Ampule:
+--      preventive action
+--      prevent reaction on specified allergens
+--      need regular ingestion to work

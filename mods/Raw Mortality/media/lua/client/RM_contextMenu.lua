@@ -2,6 +2,7 @@ require "RM_debugUtils"
 
 require "RM_Food"
 require "RM_Utils"
+require "RM_UI"
 
 
 local function showFoodInfoContextOption(item, player)
@@ -84,7 +85,7 @@ local function createFoodInfoContextMenu(player, context, items)
         end
 
         if actualItem and actualItem:getCategory() == "Food" then
-            context:addOption("Debug Food Info", actualItem, showFoodInfoContextOption, player) 
+            context:addOption("Debug Food Info", actualItem, openFoodLabel, player) 
             context.iconTexture = getTexture("media/textures/_IsoObjInspect.png")
             
         else
