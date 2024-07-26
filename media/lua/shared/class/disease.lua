@@ -30,9 +30,6 @@ local diseasesList = {
         maxIntolerances = 3,
         Intolerances = {}, --Set by applyPlayerIntolerances()
     },
-
-    --Diabete
-
 } --]]
 
 
