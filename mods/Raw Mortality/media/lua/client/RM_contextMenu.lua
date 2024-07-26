@@ -85,9 +85,8 @@ local function createFoodInfoContextMenu(player, context, items)
         end
 
         if actualItem and actualItem:getCategory() == "Food" then
-            context:addOption("Debug Food Info", actualItem, openFoodLabel, player) 
+            context:addOption("Debug Food Info", actualItem,function() openFoodLabel(actualItem) end, player) 
             context.iconTexture = getTexture("media/textures/_IsoObjInspect.png")
-            
         else
             
         end

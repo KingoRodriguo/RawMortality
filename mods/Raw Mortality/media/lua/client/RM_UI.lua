@@ -1,4 +1,4 @@
---Todo: add Ingredients Panel
+require "FoodList"
 
 local dvNotice = "* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice."
 
@@ -7,53 +7,29 @@ local g = 10^(-3) -- gram
 local mg = 10^(-6) -- milligram
 local mcg = 10^(-9) -- microgram
 
+local foodList = RM_FoodList
+
 -- Exemple d'utilisation
 local placeHolderItem = {
     DisplayName = "Canned Bolognese",
     Weight = 0.8,
-    Calorie = 640,
+    Calorie = 0,
     Nutrients = {
         Macro = {
-            AddedSugars = 5 * g,
-            Carb = 70 * g,
-            DietaryFiber = 8 * g,
-            Fat = 20 * g,
-            Protein = 30 * g,
-            SaturatedFat = 6 * g,
+            AddedSugars = 0 * g,
+            Carb = 0 * g,
         },
         Minerals = {
-            Calcium = 160 * mg,
-            Iron = 5 * mg,
-            Magnesium = 50 * mg,
-            Phosphorus = 300 * mg,
-            Potassium = 700 * mg,
-            Sodium = 1200 * mg,
-            Zinc = 4 * mg,
+            Calcium = 0 * mg,
+            Iron = 0 * mg,
         },
         Vitamins = {
-            VitA = 400 * mcg,
-            VitB1 = 0.5 * mg,
-            VitB2 = 0.4 * mg,
-            VitB3 = 10 * mg,
-            VitB6 = 0.8 * mg,
-            VitB9 = 50 * mcg,
-            VitB12 = 1.5 * mcg,
-            VitC = 30 * mg,
-            VitD = 1 * mcg,
-            VitE = 2 * mg,
-            VitK = 25 * mcg,
+            VitA = 0 * mcg,
+            VitB1 = 0.0 * mg,
         },
     },
     Ingredients = {
         {name = "Tomatoes", qty = 200 * g},
-        {name = "Beef", qty = 150 * g},
-        {name = "Spaghetti", qty = 100 * g},
-        {name = "Carrots", qty = 60 * g},
-        {name = "Onion", qty = 50 * g},
-        {name = "Wheat Flour", qty = 20 * g,},
-        {name = "Cornstarch", qty = 10 * g},
-        {name = "Salt", qty = 5 * g},
-        {name = "Paprika", qty = 5 * g},
     },
     Allergens = {
         "Tomatoes",
@@ -243,7 +219,12 @@ local function getSmallestUnit(weight)
     return modifiedWeight, unit
 end
 
-local function FoodLabelUI(food)
+local function FoodLabelUI(item)
+    local food = foodList[item:getFullType()]
+    local weight = food.Weight or math.floor(item:getWeight()*100)/100
+    local A, B = getSmallestUnit(weight)
+    print("Weight: "..A..""..B)
+    local calories = math.floor(food.Calories*weight)
     local UI = NewUI()
     local columnWidth = UI.pxlW/2
 
@@ -252,6 +233,7 @@ local function FoodLabelUI(food)
     
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", food.DisplayName, "Large", "Center")
+    --UI:addText("", food.DisplayName, "Large", "Center")
     UI:nextLine()
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", "Nutrition Facts", "Title", "Center")
@@ -259,43 +241,43 @@ local function FoodLabelUI(food)
     -- Divider
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", " Calories", "Title", "Left")
-    UI:addText("", tostring(food.Calorie) .. " ", "Title", "Right")
+    UI:addText("", tostring(calories) .. " ", "Title", "Right")
     UI:nextLine()
     -- Divider
     UI:addEmpty("")
     UI:addText("", "% DV*    ", "Medium", "Right")
     UI:nextLine()
     -- Divider
-    if not food.Nutrients then 
-        food = placeHolderItem
-    end
+    if  food.Nutrients then 
+        for category, nutrients in pairs(food.Nutrients) do
+            if #dailyValue[category] > 0 then
+                UI:setLineHeightPixel(_lineHeight * 1.2)
+                UI:addText("", tostring(category), "Large", "Center")
+                UI:nextLine()
 
-    for category, nutrients in pairs(food.Nutrients) do
-        UI:setLineHeightPixel(_lineHeight * 1.2)
-        UI:addText("", tostring(category), "Large", "Center")
-        UI:nextLine()
+                for nutrient, value in pairs(nutrients) do
+                    local dvInfo = dailyValue[category][nutrient]
+                    local percentDV = roundToPercent(value*weight / dvInfo.dv)
+                    if value ~= 0 then
+                        UI:addText("", "        " .. dvInfo.displayName, "Medium", "Left")
+                        
+                        local ajustedValue, unit = getSmallestUnit(value*weight)
+                        local s1 = string.format("%s %s", ajustedValue, unit)
+                        local s2 = tostring(percentDV) .. " %"
 
-        for nutrient, value in pairs(nutrients) do
-            local dvInfo = dailyValue[category][nutrient]
-            local percentDV = roundToPercent(value / dvInfo.dv)
+                        UI:addText("", s1.."    ", "Medium", "Right")
+                        UI:addText("", s2.."    ", "Medium", "Right")
 
-            UI:addText("", "        " .. dvInfo.displayName, "Medium", "Left")
-            
-            local ajustedValue, unit = getSmallestUnit(value)
-            local s1 = string.format("%s %s", ajustedValue, unit)
-            local s2 = tostring(percentDV) .. " %"
+                        UI:setColumnWidthPixel(1, columnWidth)
+                        UI:setColumnWidthPixel(2, columnWidth/2)
+                        UI:setColumnWidthPixel(3, columnWidth/2)
 
-            UI:addText("", s1.."    ", "Medium", "Right")
-            UI:addText("", s2.."    ", "Medium", "Right")
-
-            UI:setColumnWidthPixel(1, columnWidth)
-            UI:setColumnWidthPixel(2, columnWidth/2)
-            UI:setColumnWidthPixel(3, columnWidth/2)
-
-            UI:nextLine()
+                        UI:nextLine()
+                    end
+                end
+            end
         end
     end
-
     UI:setBorderToAllElements(true)
     UI:setBorderNamedElements(false)
 
@@ -307,7 +289,7 @@ local function FoodLabelUI(food)
         if #ingredients ~= 0 then
             ingredients = ingredients .. ", "
         end
-        local roundedValue = roundToPercent(ingredient.qty/food.Weight)
+        local roundedValue = roundToPercent(ingredient.qty*weight/weight)
         local percent =  ""
         if roundedValue < 1 then
             percent = "(<1 %)"
@@ -336,5 +318,5 @@ end
 
 -- Appel de la fonction
 function openFoodLabel(food)
-    FoodLabelUI(food or placeHolderItem)
+    FoodLabelUI(food)
 end
