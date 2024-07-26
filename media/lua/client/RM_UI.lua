@@ -43,147 +43,147 @@ local placeHolderItem = {
 local dailyValue = {
     Macro = {
         AddedSugars = {
-            displayName = "Added Sugars",
+            displayName = getText("UI_FoodLabel_DV_AddedSugars"),
             dv = 50 * g,
         },
         DietaryFiber = {
-            displayName = "Dietary Fiber",
+            displayName = getText("UI_FoodLabel_DV_DietaryFiber"),
             dv = 28 * g,
         },
         Fat = {
-            displayName = "Fat",
+            displayName = getText("UI_FoodLabel_DV_Fat"),
             dv = 78 * g,
         },
         SaturatedFat = {
-            displayName = "Saturated Fat",
+            displayName = getText("UI_FoodLabel_DV_SaturatedFat"),
             dv = 20 * g,
         },
         Carb = {
-            displayName = "Carbohydrate",
+            displayName = getText("UI_FoodLabel_DV_Carb"),
             dv = 275 * g,
         },
         Protein = {
-            displayName = "Protein",
+            displayName = getText("UI_FoodLabel_DV_Protein"),
             dv = 50 * g,
         },
         Cholesterol = {
-            displayName = "Cholesterol",
+            displayName = getText("UI_FoodLabel_DV_Cholesterol"),
             dv = 300 * mg,
         },
     },
     Minerals = {
         Calcium = {
-            displayName = "Calcium",
+            displayName = getText("UI_FoodLabel_DV_Calcium"),
             dv = 1300 * mg,
         },
         Chloride = {
-            displayName = "Chloride",
+            displayName = getText("UI_FoodLabel_DV_Chloride"),
             dv = 2300 * mg,
         },
         Copper = {
-            displayName = "Copper",
+            displayName = getText("UI_FoodLabel_DV_Copper"),
             dv = 0.9 * mg,
         },
         Iodine = {
-            displayName = "Iodine",
+            displayName = getText("UI_FoodLabel_DV_Iodine"),
             dv = 150 * mcg,
         },
         Iron = {
-            displayName = "Iron",
+            displayName = getText("UI_FoodLabel_DV_Iron"),
             dv = 18 * mg,
         },
         Magnesium = {
-            displayName = "Magnesium",
+            displayName = getText("UI_FoodLabel_DV_Magnesium"),
             dv = 420 * mg,
         },
         Manganese = {
-            displayName = "Manganese",
+            displayName = getText("UI_FoodLabel_DV_Manganese"),
             dv = 2.3 * mg,
         },
         Molybdenum = {
-            displayName = "Molybdenum",
+            displayName = getText("UI_FoodLabel_DV_Molybdenum"),
             dv = 45 * mcg,
         },
         Phosphorus = {
-            displayName = "Phosphorus",
+            displayName = getText("UI_FoodLabel_DV_Phosphorus"),
             dv = 1250 * mg,
         },
         Potassium = {
-            displayName = "Potassium",
+            displayName = getText("UI_FoodLabel_DV_Potassium"),
             dv = 4700 * mg,
         },
         Selenium = {
-            displayName = "Selenium",
+            displayName = getText("UI_FoodLabel_DV_Selenium"),
             dv = 55 * mcg,
         },
         Sodium = {
-            displayName = "Sodium",
+            displayName = getText("UI_FoodLabel_DV_Sodium"),
             dv = 2300 * mg,
         },
         Zinc = {
-            displayName = "Zinc",
+            displayName = getText("UI_FoodLabel_DV_Zinc"),
             dv = 11 * mg,
         },
         Chromium = {
-            displayName = "Chromium",
+            displayName = getText("UI_FoodLabel_DV_Chromium"),
             dv = 35 * mcg,
         },
         Choline = {
-            displayName = "Choline",
+            displayName = getText("UI_FoodLabel_DV_Choline"),
             dv = 550 * mg,
         },
     },
     Vitamins = {
         VitB7 = {
-            displayName = "Vitamin B7",
+            displayName = getText("UI_FoodLabel_DV_VitB7"),
             dv = 30 * mcg,
         },
         VitB9 = {
-            displayName = "Vitamin B9",
+            displayName = getText("UI_FoodLabel_DV_VitB9"),
             dv = 400 * mcg,
         },
         VitB3 = {
-            displayName = "Vitamin B3",
+            displayName = getText("UI_FoodLabel_DV_VitB3"),
             dv = 16 * mg,
         },
         VitB5 = {
-            displayName = "Vitamin B5",
+            displayName = getText("UI_FoodLabel_DV_VitB5"),
             dv = 5 * mg,
         },
         VitB2 = {
-            displayName = "Vitamin B2",
+            displayName = getText("UI_FoodLabel_DV_VitB2"),
             dv = 1.3 * mg,
         },
         VitB1 = {
-            displayName = "Vitamin B1",
+            displayName = getText("UI_FoodLabel_DV_VitB1"),
             dv = 1.2 * mg,
         },
         VitA = {
-            displayName = "Vitamin A",
+            displayName = getText("UI_FoodLabel_DV_VitA"),
             dv = 900 * mcg,
         },
         VitB6 = {
-            displayName = "Vitamin B6",
+            displayName = getText("UI_FoodLabel_DV_VitB6"),
             dv = 1.7 * mg,
         },
         VitB12 = {
-            displayName = "Vitamin B12",
+            displayName = getText("UI_FoodLabel_DV_VitB12"),
             dv = 2.4 * mcg,
         },
         VitC = {
-            displayName = "Vitamin C",
+            displayName = getText("UI_FoodLabel_DV_VitC"),
             dv = 90 * mg,
         },
         VitD = {
-            displayName = "Vitamin D",
+            displayName = getText("UI_FoodLabel_DV_VitD"),
             dv = 20 * mcg,
         },
         VitE = {
-            displayName = "Vitamin E",
+            displayName = getText("UI_FoodLabel_DV_VitE"),
             dv = 15 * mg,
         },
         VitK = {
-            displayName = "Vitamin K",
+            displayName = getText("UI_FoodLabel_DV_VitK"),
             dv = 120 * mcg,
         },
     },
@@ -233,11 +233,11 @@ local function FoodLabelUI(item)
     UI:addText("", food.DisplayName, "Large", "Center")
     UI:nextLine()
     UI:setLineHeightPixel(_lineHeight * 2)
-    UI:addText("", "Nutrition Facts", "Title", "Center")
+    UI:addText("", getText("UI_FoodLabel_NutritionFacts"), "Title", "Center")
     UI:nextLine()
     -- Divider
     UI:setLineHeightPixel(_lineHeight * 2)
-    UI:addText("", " Calories", "Title", "Left")
+    UI:addText("", getText("UI_FoodLabel_Calories"), "Title", "Left")
     UI:addText("", tostring(calories) .. " ", "Title", "Right")
     UI:nextLine()
     -- Divider
@@ -305,7 +305,7 @@ local function FoodLabelUI(item)
     UI:nextLine()
     UI:addEmpty()
     UI:nextLine()
-    UI:addText("", "Allergy Advice : For Allergens, see ingredient in ")
+    UI:addText("", getText("UI_FoodLabel_Advice"), "Title", "Center")
 
     UI:saveLayout()
 end
