@@ -1,5 +1,3 @@
-
-
 require "TimedActions/ISEatFoodAction"
 require "RM_Food"
 
@@ -35,33 +33,20 @@ RM_Diseases = {
 }
 
 function GetDisease(player, diseaseID)
-    
-    
-
     local modData = player:getModData()
 
-    -- Check for player.diseases
     if not modData.diseases then
-        
         modData.diseases = {}
     end
 
-    -- Add RM_Disease[diseaseID] to player.diseases if it doesn't exist
     if not modData.diseases[diseaseID] then
         modData.diseases[diseaseID] = RM_Diseases[diseaseID]
-        
-    else
-        
     end
 
     return modData.diseases[diseaseID]
 end
 
-
 function CureDisease(player, diseaseID)
-    
-    
-
     local modData = player:getModData()
 
     if tostring(diseaseID) == "all" then
@@ -73,21 +58,16 @@ function CureDisease(player, diseaseID)
         end
         return
     end
-    
+
     if modData.diseases and modData.diseases[diseaseID] then
         modData.diseases[diseaseID] = nil
-        
         print("Disease cured: " .. diseaseID)
     else
-        
         print("Disease not found: " .. diseaseID)
     end
 end
 
-
 function CheckDisease(player)
-    
-    
     if not player then
         print("player nil")
         return
@@ -95,14 +75,11 @@ function CheckDisease(player)
 
     local modData = player:getModData()
 
-    -- Check for player.diseases
     if not modData.diseases then
-        
         player:Say("No diseases contracted.")
         return false
     end
 
-    -- Print list of all contracted diseases
     player:Say("List of contracted diseases:")
     for diseaseID, disease in pairs(modData.diseases) do
         player:Say(diseaseID)
@@ -112,55 +89,56 @@ function CheckDisease(player)
 end
 
 function ApplyAllergySymptoms(player)
-    if player:getModData().diseases["Allergie"].isActive then 
-        
-        
-
-        -- Apply random fatigue based on severity
-        local randomFatigue = ZombRandFloat(0.1, 0.5)  -- Random value between 0.1 and 0.5 scaled by severity
+    if player:getModData().diseases["Allergie"].isActive then
+        local randomFatigue = ZombRandFloat(0.1, 0.5)
         player:getStats():setFatigue(math.min(player:getStats():getFatigue() + randomFatigue, 1))
-        
 
-        -- Apply random pain based on severity
-        local randomPain = ZombRandFloat(50, 80)  -- Random value between 0.1 and 0.5 scaled by severity
+        local randomPain = ZombRandFloat(50, 80)
         local bodyPart = player:getBodyDamage():getBodyPart(BodyPartType.FromString("Torso_Lower"))
-            bodyPart:setAdditionalPain(randomPain)
-        
+        bodyPart:setAdditionalPain(randomPain)
 
-        -- Apply random sickness based on severity
-        local randomSickness = ZombRandFloat(0.1, 0.5) -- Random value between 0.1 and 0.5 scaled by severity
+        local randomSickness = ZombRandFloat(0.1, 0.5)
         --player:getStats():setSickness(math.min(player:getStats():getSickness() + randomSickness, 1))
-        
 
         local _currentFatigue = player:getStats():getFatigue()
         local _currentPain = player:getStats():getPain()
         local _currentSickness = player:getStats():getSickness()
 
-        local progress = (_currentFatigue + _currentPain + _currentSickness)/3
+        local progress = (_currentFatigue + _currentPain + _currentSickness) / 3
         player:getModData().diseases["Allergie"].currentProgression = progress
-        player:Say("Allergie progression: " ..progress)
+        player:Say("Allergie progression: " .. progress)
     end
 end
 
-function ApplyDiseaseSymptoms()
-    local player = getPlayer()
+function ApplyIntoleranceSymptoms(player)
+    if player:getModData().diseases["Intolerance"].isActive then
+        local randomFatigue = ZombRandFloat(0.1, 0.5)
+        player:getStats():setFatigue(math.min(player:getStats():getFatigue() + randomFatigue, 1))
 
-    if player:getModData().diseases then 
-        --applyAllergySymptoms(player)
+        local randomPain = ZombRandFloat(50, 80)
+        local bodyPart = player:getBodyDamage():getBodyPart(BodyPartType.FromString("Torso_Lower"))
+        bodyPart:setAdditionalPain(randomPain)
+
+        local randomSickness = ZombRandFloat(0.1, 0.5)
+        --player:getStats():setSickness(math.min(player:getStats():getSickness() + randomSickness, 1))
+
+        local _currentFatigue = player:getStats():getFatigue()
+        local _currentPain = player:getStats():getPain()
+        local _currentSickness = player:getStats():getSickness()
+
+        local progress = (_currentFatigue + _currentPain + _currentSickness) / 3
+        player:getModData().diseases["Intolerance"].currentProgression = progress
+        player:Say("Intolerance progression: " .. progress)
     end
 end
-
 
 function ApplyPlayerIntolerances(player, number)
-
     local modData = player:getModData()
 
-    -- Check if player.diseases contains "Intolerance"
     if not modData.diseases or not modData.diseases["Intolerance"] then
         return
     end
 
-    -- Get list of all unique ingredients in RM_Food
     local IntolerancesList = {}
     for foodID, foodData in pairs(RM_Food) do
         if foodData.Ingredients then
@@ -177,11 +155,9 @@ function ApplyPlayerIntolerances(player, number)
         table.insert(uniqueIntolerances, ingredient)
     end
 
-    -- Choose a random number x between 1 and number, or 1 if number is < 1 or not a number
-    local x = ZombRand(1,number)
+    local x = ZombRand(1, number)
     x = math.min(x, #uniqueIntolerances)
 
-    -- Add x intolerances to player.getModData().diseases["Intolerance"].Intolerances from uniqueIntolerances
     if not modData.diseases["Intolerance"].Intolerances then
         modData.diseases["Intolerance"].Intolerances = {}
     end
@@ -195,15 +171,12 @@ function ApplyPlayerIntolerances(player, number)
 end
 
 function ApplyPlayerAllergens(player, number)
-
     local modData = player:getModData()
 
-    -- Check if player.diseases contains "Allergie"
     if not modData.diseases or not modData.diseases["Allergie"] then
         return
     end
 
-    -- Get list of all unique allergens in RM_Food
     local allergensList = {}
     for foodID, foodData in pairs(RM_Food) do
         if foodData.Allergens then
@@ -220,11 +193,9 @@ function ApplyPlayerAllergens(player, number)
         table.insert(uniqueAllergens, allergen)
     end
 
-    -- Choose a random number x between 1 and number, or 1 if number is < 1 or not a number
-    local x = ZombRand(1,number)
+    local x = ZombRand(1, number)
     x = math.min(x, #uniqueAllergens)
 
-    -- Add x allergens to player.getModData().diseases["Allergie"].Allergens from uniqueAllergens
     if not modData.diseases["Allergie"].Allergens then
         modData.diseases["Allergie"].Allergens = {}
     end
@@ -240,9 +211,7 @@ end
 function RemovePlayerAllergens(player)
     local modData = player:getModData()
 
-    -- Check if player.diseases contains "Allergie"
     if modData.diseases and modData.diseases["Allergie"] and modData.diseases["Allergie"].Allergens then
-        -- Remove all allergens
         modData.diseases["Allergie"].Allergens = {}
     end
 end
@@ -250,21 +219,17 @@ end
 function RemovePlayerIntolerances(player)
     local modData = player:getModData()
 
-    -- Check if player.diseases contains "Intolerance"
     if modData.diseases and modData.diseases["Intolerance"] and modData.diseases["Intolerance"].Intolerances then
-        -- Remove all intolerances
         modData.diseases["Intolerance"].Intolerances = {}
-    else
     end
 end
 
 function GetPlayerAllergens(_player)
     local modData = getPlayer():getModData()
 
-    -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
     if modData.diseases and modData.diseases["Allergie"] and modData.diseases["Allergie"].Allergens then
         local allergens = modData.diseases["Allergie"].Allergens
-        getPlayer():Say("Allergens: " ..table.concat(allergens, ", "))
+        getPlayer():Say("Allergens: " .. table.concat(allergens, ", "))
         return allergens
     else
         getPlayer():Say("Allergens: None")
@@ -272,10 +237,24 @@ function GetPlayerAllergens(_player)
     end
 end
 
+function ApplyDiseaseSymptoms()
+    local player = getPlayer()
+    if not player then
+        return
+    end
+
+    if player:getModData().diseases["Allergie"].isActive then
+        ApplyAllergySymptoms(player)
+    end
+
+    if player:getModData().diseases["Intolerance"].isActive then
+        ApplyIntoleranceSymptoms(player)
+    end
+end
+
 function GetPlayerIntolerances(_player)
     local modData = getPlayer():getModData()
 
-    -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
     if modData.diseases and modData.diseases["Intolerance"] and modData.diseases["Intolerance"].Intolerances then
         local Intolerances = modData.diseases["Intolerance"].Intolerances
         return Intolerances
@@ -285,27 +264,40 @@ function GetPlayerIntolerances(_player)
     end
 end
 
+function CheckAllergens(_item, _allergens)
+    local count = 0
+    for _, allergen in pairs(_allergens) do
+        for _, ingredient in pairs(_item) do
+            if allergen == ingredient then
+                count = count + 1
+            end
+        end
+    end
+    return count
+end
+
+function CheckIntolerances(_item, _intolerances)
+    local count = 0
+    for _, intolerance in pairs(_intolerances) do
+        for _, ingredient in pairs(_item) do
+            if intolerance == ingredient then
+                count = count + 1
+            end
+        end
+    end
+    return count
+end
+
 local originalPerform = ISEatFoodAction.perform
 
 function ISEatFoodAction:perform()
-    -- Your additional logic here
-    print("Running ISEatFoodAction") 
-    if not self.character or not self.item then
-        print("ERROR")
-        return
-    end
-    
-    -- Call the original perform function
     originalPerform(self)
-    
+
     -- Additional logic after the original perform
     local _player = getPlayer()
     local _item = {self.item:getType()}
 
-    if CheckAllergens(_item, GetPlayerAllergens(_player)) > 0 then
-        _player:getModData().diseases["Allergie"].isActive = true
-        _player:Say("Allergie active")
-    end
+    --check if a disease needs to be applied set active to true
 end
 
 Events.EveryTenMinutes.Add(ApplyDiseaseSymptoms)
