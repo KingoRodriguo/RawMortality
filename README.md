@@ -26,5 +26,5 @@ Raw Mortality is a mod for Project Zomboid that introduces new mechanics related
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
 ## Contact
-For any questions or support, please contact me on discord at [KingoRodriguo](297712256286720002) or open an issue [here](https://github.com/KingoRodriguo/RawMortality/issues) 
+For any questions or support, please contact me on discord at KingoRodriguo (ID:297712256286720002) or open an issue [here](https://github.com/KingoRodriguo/RawMortality/issues) 
 
