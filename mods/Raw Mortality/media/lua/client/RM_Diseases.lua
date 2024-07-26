@@ -145,8 +145,8 @@ end
 function applyDiseaseSymptoms()
     local player = getPlayer()
 
-    if player:getModData().diseases["Allergie"] and player:getModData().diseases["Allergie"].isActive then 
-        applyAllergySymptoms(player)
+    if player:getModData().diseases then 
+        --applyAllergySymptoms(player)
     end
 end
 

@@ -221,10 +221,8 @@ end
 
 local function FoodLabelUI(item)
     local food = RM_FoodList[item:getFullType()]
-    local weight = food.Weight or math.floor(item:getWeight()*100)/100
-    local A, B = getSmallestUnit(weight)
-    print("Weight: "..A..""..B)
-    local calories = math.floor(food.Calories*weight)
+    local totalWeight = item:getWeight()
+    local calories = item:getCalories() or math.floor(food.Calories*totalWeight)
     local UI = NewUI()
     local columnWidth = UI.pxlW/2
 
@@ -254,11 +252,11 @@ local function FoodLabelUI(item)
             UI:nextLine()
             for nutrient, value in pairs(nutrients) do
                 local dvInfo = dailyValue[category][nutrient]
-                local percentDV = roundToPercent(value*weight / dvInfo.dv)
+                local percentDV = roundToPercent(value*totalWeight / dvInfo.dv)
                 if value ~= 0 then
                     UI:addText("", "        " .. dvInfo.displayName, "Medium", "Left")
                     
-                    local ajustedValue, unit = getSmallestUnit(value*weight)
+                    local ajustedValue, unit = getSmallestUnit(value*totalWeight)
                     local s1 = string.format("%s %s", ajustedValue, unit)
                     local s2 = tostring(percentDV) .. " %"
 
@@ -285,7 +283,7 @@ local function FoodLabelUI(item)
         if #ingredients ~= 0 then
             ingredients = ingredients .. ", "
         end
-        local roundedValue = roundToPercent(ingredient.qty*weight/weight)
+        local roundedValue = roundToPercent(ingredient.qty*totalWeight/totalWeight)
         local percent =  ""
         if roundedValue < 1 then
             percent = "(<1 %)"
