@@ -220,7 +220,7 @@ local function getSmallestUnit(weight)
 end
 
 local function FoodLabelUI(item)
-    local food = foodList[item:getFullType()]
+    local food = RM_FoodList[item:getFullType()]
     local weight = food.Weight or math.floor(item:getWeight()*100)/100
     local A, B = getSmallestUnit(weight)
     print("Weight: "..A..""..B)
@@ -233,7 +233,6 @@ local function FoodLabelUI(item)
     
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", food.DisplayName, "Large", "Center")
-    --UI:addText("", food.DisplayName, "Large", "Center")
     UI:nextLine()
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", "Nutrition Facts", "Title", "Center")
@@ -250,30 +249,27 @@ local function FoodLabelUI(item)
     -- Divider
     if  food.Nutrients then 
         for category, nutrients in pairs(food.Nutrients) do
-            if #dailyValue[category] > 0 then
-                UI:setLineHeightPixel(_lineHeight * 1.2)
-                UI:addText("", tostring(category), "Large", "Center")
-                UI:nextLine()
+            UI:setLineHeightPixel(_lineHeight * 1.2)
+            UI:addText("", tostring(category), "Large", "Center")
+            UI:nextLine()
+            for nutrient, value in pairs(nutrients) do
+                local dvInfo = dailyValue[category][nutrient]
+                local percentDV = roundToPercent(value*weight / dvInfo.dv)
+                if value ~= 0 then
+                    UI:addText("", "        " .. dvInfo.displayName, "Medium", "Left")
+                    
+                    local ajustedValue, unit = getSmallestUnit(value*weight)
+                    local s1 = string.format("%s %s", ajustedValue, unit)
+                    local s2 = tostring(percentDV) .. " %"
 
-                for nutrient, value in pairs(nutrients) do
-                    local dvInfo = dailyValue[category][nutrient]
-                    local percentDV = roundToPercent(value*weight / dvInfo.dv)
-                    if value ~= 0 then
-                        UI:addText("", "        " .. dvInfo.displayName, "Medium", "Left")
-                        
-                        local ajustedValue, unit = getSmallestUnit(value*weight)
-                        local s1 = string.format("%s %s", ajustedValue, unit)
-                        local s2 = tostring(percentDV) .. " %"
+                    UI:addText("", s1.."    ", "Medium", "Right")
+                    UI:addText("", s2.."    ", "Medium", "Right")
 
-                        UI:addText("", s1.."    ", "Medium", "Right")
-                        UI:addText("", s2.."    ", "Medium", "Right")
+                    UI:setColumnWidthPixel(1, columnWidth)
+                    UI:setColumnWidthPixel(2, columnWidth/2)
+                    UI:setColumnWidthPixel(3, columnWidth/2)
 
-                        UI:setColumnWidthPixel(1, columnWidth)
-                        UI:setColumnWidthPixel(2, columnWidth/2)
-                        UI:setColumnWidthPixel(3, columnWidth/2)
-
-                        UI:nextLine()
-                    end
+                    UI:nextLine()
                 end
             end
         end
