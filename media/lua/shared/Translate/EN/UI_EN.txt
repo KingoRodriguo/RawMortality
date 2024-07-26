@@ -2,6 +2,7 @@ UI_EN = {
     UI_ShowFoodLabelButton = "Show Food Label",
 
     UI_FoodLabel_NutritionFacts = "Nutrition Facts",
+    UI_FoodLabel_Calories = "Calories",
     UI_FoodLabel_Macro = "Macronutrient",
     UI_FoodLabel_Minerals = "Minerals",
     UI_FoodLabel_Vitamins = "Vitamins,
