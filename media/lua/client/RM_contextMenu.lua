@@ -17,40 +17,40 @@ local function showFoodInfoContextOption(item, player)
         return
     end
 
-    local foodIngredients = getIngredients(itemName)
+    local foodIngredients = GetIngredients(itemName)
     if not foodIngredients then
         foodIngredients = {"Unknown"}
     end
-    foodIngredientsList = table.concat(foodIngredients, ", ")
+    local foodIngredientsList = table.concat(foodIngredients, ", ")
 
-    local foodAllergens = getAllergens(itemName)
+    local foodAllergens = GetAllergens(itemName)
     if not foodAllergens then
         foodAllergens = {"Unknown"}
     end
-    foodAllergensList = table.concat(foodAllergens, ", ")
+    local foodAllergensList = table.concat(foodAllergens, ", ")
 
-    local playerAllergensList = getPlayerAllergens(getPlayer()) or {"None"}
-    local playerIntolerantsList = getPlayerIntolerances(getPlayer()) or {"None"}
+    local playerAllergensList = GetPlayerAllergens(getPlayer()) or {"None"}
+    local playerIntolerantsList = GetPlayerIntolerances(getPlayer()) or {"None"}
 
     local _infoFoodName = string.format("Food: %s\n\n", item:getDisplayName())
 
     local _infoIngredients = ""
     local _infoAllergens = ""
 
-    if isFoodPackaged(item) or _isDebugMode then
-        getPlayer():Say(tostring(isFoodPackaged(item)))
+    if IsFoodPackaged(item) or DebugMode then
+        getPlayer():Say(tostring(IsFoodPackaged(item)))
         _infoIngredients = string.format("Ingredients: %s\n",foodIngredientsList)
         _infoAllergens = string.format("Allergens: %s\n\n",foodAllergensList)
     end
 
     local _infoPlayerIntolerance = string.format("Player Intolerance: %s\n",table.concat(playerIntolerantsList, ", "))
-    local _infoIntoleranceCount = string.format("Intolorance match: %s\n\n",checkIngredients({item:getType()},playerIntolerantsList))
+    local _infoIntoleranceCount = string.format("Intolorance match: %s\n\n",CheckIngredients({item:getType()},playerIntolerantsList))
 
     local _infoPlayerAllergens = string.format("Player Allergens: %s\n",table.concat(playerAllergensList, ", "))
-    local _infoAllergensCount = string.format("Allergens match: %s\n\n",checkAllergens({item:getType()},playerAllergensList))
+    local _infoAllergensCount = string.format("Allergens match: %s\n\n",CheckAllergens({item:getType()},playerAllergensList))
     
     local _debugText = ""
-    if _isDebugMode then
+    if DebugMode then
         _debugText = _infoPlayerAllergens.. "" .._infoAllergensCount.. "" .._infoPlayerIntolerance.. "" .._infoIntoleranceCount
     end
 
@@ -73,7 +73,7 @@ end
 
 local function createFoodInfoContextMenu(player, context, items)
 
-    if not player or not context or not items or not _isDebugMode then
+    if not player or not context or not items or not DebugMode then
         
         return
     end
@@ -86,7 +86,7 @@ local function createFoodInfoContextMenu(player, context, items)
 
         if actualItem and actualItem:getCategory() == "Food" then
             --if isFoodPackaged(actualItem) then
-                context:addOption("See Food Label", actualItem,function() openFoodLabel(actualItem) end, player) 
+                context:addOption("See Food Label", actualItem,function() OpenFoodLabel(actualItem) end, player) 
                 context.iconTexture = getTexture("media/textures/_IsoObjInspect.png")
             --end
         else

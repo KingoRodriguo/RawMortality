@@ -227,7 +227,7 @@ local function FoodLabelUI(item)
     local columnWidth = UI.pxlW/2
 
     UI:setDefaultLineHeightPixel(UI:getDefaultLineHeightPixel() * 1.2)
-    _lineHeight = UI:getDefaultLineHeightPixel()
+    local _lineHeight = UI:getDefaultLineHeightPixel()
     
     UI:setLineHeightPixel(_lineHeight * 2)
     UI:addText("", food.DisplayName, "Large", "Center")
@@ -311,6 +311,6 @@ local function FoodLabelUI(item)
 end
 
 -- Appel de la fonction
-function openFoodLabel(food)
+function OpenFoodLabel(food)
     FoodLabelUI(food)
 end

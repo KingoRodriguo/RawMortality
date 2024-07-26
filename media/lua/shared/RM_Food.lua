@@ -5149,9 +5149,9 @@ RM_Food = {
     },
 }
 
-function getIngredients(foodID)
+function GetIngredients(foodID)
 
-    ingredients = {"Unknown"}
+    local ingredients = {"Unknown"}
     -- Check if RM_Food[foodID] exists
     if RM_Food[foodID] then
         -- Check if RM_Food[foodID].Ingredients exists
@@ -5163,22 +5163,22 @@ function getIngredients(foodID)
     return ingredients
 end
 
-function setIngredients(foodID, items)
+function SetIngredients(foodID, items)
     RM_Food[foodID].Ingredients = items
 end
 
-function addIngredients(foodID, items)
+function AddIngredients(foodID, items)
     table.insert(RM_Food[foodID].Ingredients, items)
 end
 
-function removeIngredients(foodID, items)
+function RemoveIngredients(foodID, items)
     RM_Food[foodID].Ingredients[items] = nil
 end
 
-function getAllergens(foodID)
+function GetAllergens(foodID)
     
 
-    allergens = {"Unknown"}
+    local allergens = {"Unknown"}
     -- Check if RM_Food[foodID] exists
     if RM_Food[foodID] then
         -- Check if RM_Food[foodID].Allergens exists
@@ -5190,19 +5190,19 @@ function getAllergens(foodID)
     return allergens
 end
 
-function setAllergens(foodID, items)
+function SetAllergens(foodID, items)
     RM_Food[foodID].Allergens = items
 end
 
-function addAllergens(foodID, items)
+function AddAllergens(foodID, items)
     table.insert(RM_Food[foodID].Allergens, items)
 end
 
-function removeAllergens(foodID, items)
+function RemoveAllergens(foodID, items)
     RM_Food[foodID].Allergens[items] = nil
 end
 
-function addItems_RMFood(foodItems, override)
+function AddItems_RMFood(foodItems, override)
     override = override or false
     for _, foodID in pairs(foodItems) do
         if not RM_Food[foodID] then
@@ -5214,7 +5214,7 @@ function addItems_RMFood(foodItems, override)
     return foodItems
 end
 
-function removeItems_RMFood(foodItems)
+function RemoveItems_RMFood(foodItems)
     for _, foodID in pairs(foodItems) do
         if RM_Food[foodID] then
             RM_Food[foodID] = nil
@@ -5223,7 +5223,7 @@ function removeItems_RMFood(foodItems)
     return foodItems
 end
 
-function checkIngredients(foodIDs, ingredients)
+function CheckIngredients(foodIDs, ingredients)
 
     local content = 0
 
@@ -5241,7 +5241,7 @@ function checkIngredients(foodIDs, ingredients)
     end
 end
 
-function checkAllergens(foodIDs, allergens)
+function CheckAllergens(foodIDs, allergens)
  
     local content = 0
 
@@ -5259,7 +5259,7 @@ function checkAllergens(foodIDs, allergens)
     end
 end
 
-function isFoodPackaged(foodItem)
+function IsFoodPackaged(foodItem)
     if instanceof(foodItem, "Food") then
         return foodItem:isPackaged()
     else

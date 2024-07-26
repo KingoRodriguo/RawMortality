@@ -34,7 +34,7 @@ RM_Diseases = {
 
 }
 
-function getDisease(player, diseaseID)
+function GetDisease(player, diseaseID)
     
     
 
@@ -58,7 +58,7 @@ function getDisease(player, diseaseID)
 end
 
 
-function cureDisease(player, diseaseID)
+function CureDisease(player, diseaseID)
     
     
 
@@ -67,7 +67,7 @@ function cureDisease(player, diseaseID)
     if tostring(diseaseID) == "all" then
         print("Removing all diseases")
         for _, ID in pairs(modData.diseases) do
-            _name = ID.name
+            local _name = ID.name
             modData.diseases[_name] = nil
             print("name: ".._name)
         end
@@ -85,7 +85,7 @@ function cureDisease(player, diseaseID)
 end
 
 
-function checkDisease(player)
+function CheckDisease(player)
     
     
     if not player then
@@ -111,7 +111,7 @@ function checkDisease(player)
     return true
 end
 
-function applyAllergySymptoms(player)
+function ApplyAllergySymptoms(player)
     if player:getModData().diseases["Allergie"].isActive then 
         
         
@@ -142,7 +142,7 @@ function applyAllergySymptoms(player)
     end
 end
 
-function applyDiseaseSymptoms()
+function ApplyDiseaseSymptoms()
     local player = getPlayer()
 
     if player:getModData().diseases then 
@@ -151,7 +151,7 @@ function applyDiseaseSymptoms()
 end
 
 
-function applyPlayerIntolerances(player, number)
+function ApplyPlayerIntolerances(player, number)
 
     local modData = player:getModData()
 
@@ -194,7 +194,7 @@ function applyPlayerIntolerances(player, number)
     end
 end
 
-function applyPlayerAllergens(player, number)
+function ApplyPlayerAllergens(player, number)
 
     local modData = player:getModData()
 
@@ -237,7 +237,7 @@ function applyPlayerAllergens(player, number)
     end
 end
 
-function removePlayerAllergens(player)
+function RemovePlayerAllergens(player)
     local modData = player:getModData()
 
     -- Check if player.diseases contains "Allergie"
@@ -247,7 +247,7 @@ function removePlayerAllergens(player)
     end
 end
 
-function removePlayerIntolerances(player)
+function RemovePlayerIntolerances(player)
     local modData = player:getModData()
 
     -- Check if player.diseases contains "Intolerance"
@@ -258,7 +258,7 @@ function removePlayerIntolerances(player)
     end
 end
 
-function getPlayerAllergens(_player)
+function GetPlayerAllergens(_player)
     local modData = getPlayer():getModData()
 
     -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
@@ -272,7 +272,7 @@ function getPlayerAllergens(_player)
     end
 end
 
-function getPlayerIntolerances(_player)
+function GetPlayerIntolerances(_player)
     local modData = getPlayer():getModData()
 
     -- Get Allergens from player.getModData().diseases["Allergie"].Allergens
@@ -287,22 +287,25 @@ end
 
 local originalPerform = ISEatFoodAction.perform
 
-function ISEatFoodAction:perform()   
+function ISEatFoodAction:perform()
+    -- Your additional logic here
     print("Running ISEatFoodAction") 
     if not self.character or not self.item then
         print("ERROR")
         return
     end
     
+    -- Call the original perform function
     originalPerform(self)
     
+    -- Additional logic after the original perform
     local _player = getPlayer()
     local _item = {self.item:getType()}
 
-    if checkAllergens(_item, getPlayerAllergens(_player)) > 0 then
+    if CheckAllergens(_item, GetPlayerAllergens(_player)) > 0 then
         _player:getModData().diseases["Allergie"].isActive = true
         _player:Say("Allergie active")
     end
 end
 
-Events.EveryTenMinutes.Add(applyDiseaseSymptoms)
+Events.EveryTenMinutes.Add(ApplyDiseaseSymptoms)

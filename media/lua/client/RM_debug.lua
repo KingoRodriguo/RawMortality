@@ -2,13 +2,13 @@ require "RM_debugUtils"
 require "RM_Diseases"
 require "RM_UI"
 
-_defaultTexture = "media/textures/_IsoObjInspect.png"
+local _defaultTexture = "media/textures/_IsoObjInspect.png"
 
 --////////////////////////////////////////////////////////////////////
 --Context menu definition
 --////////////////////////////////////////////////////////////////////
 
-debugMenu = {
+DebugMenu = {
     _Main = { 
         DisplayName = "Raw Mortality",
         func = function() return nil end,
@@ -28,11 +28,11 @@ debugMenu = {
                         subs = {
                             _option1 = {
                                 DisplayName = "Check player diseases",
-                                func = function() checkDisease(getPlayer()) end,
+                                func = function() CheckDisease(getPlayer()) end,
                             },
                             _option2 = {
                                 DisplayName = "Remove player diseases",
-                                func = function() cureDisease(getPlayer(), "all") end,
+                                func = function() CureDisease(getPlayer(), "all") end,
                             },
                             _option3 = {
                                 DisplayName = "add player diseases",
@@ -41,11 +41,11 @@ debugMenu = {
                                 subs = {
                                     _option1 = {
                                         DisplayName = "Allergie",
-                                        func = function () getDisease(getPlayer(), "Allergie") end,
+                                        func = function () GetDisease(getPlayer(), "Allergie") end,
                                     },
                                     _option2 = {
                                         DisplayName = "Intolerance",
-                                        func = function () getDisease(getPlayer(), "Intolerance") end,
+                                        func = function () GetDisease(getPlayer(), "Intolerance") end,
                                     },
                                 },
                             },
@@ -92,7 +92,7 @@ debugMenu = {
                 subs = {
                     _Option1 = {
                         DisplayName = "Open Food UI",
-                        func = function() UITest() end,
+                        func = function() OpenFoodLabel() end,
                         texture = _defaultTexture,
             
                         subs = {},                    

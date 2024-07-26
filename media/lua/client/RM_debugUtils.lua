@@ -11,7 +11,7 @@ require "RM_debug"
 -- global debug variable
 --////////////////////////////////////////////////////////////////////
 
-_isDebugMode = true
+DebugMode = true
 
 --////////////////////////////////////////////////////////////////////
 -- debug Menu functions definition
@@ -24,7 +24,7 @@ _isDebugMode = true
 --////////////////////////////////////////////////////////////////////
 
 local function addSubMenus(context, parentMenu, subs, worldObjects, player)
-    if not _isDebugMode then  return end
+    if not DebugMode then  return end
     for _, sub in pairs(subs) do
         local _subMenu = context:addOption(sub.DisplayName or "Error", worldObjects, function() sub.func() end )
         if sub.texture then
@@ -39,8 +39,8 @@ local function addSubMenus(context, parentMenu, subs, worldObjects, player)
 end
 
 local function RMDebugContext(player, context, worldObjects, test)
-    if not _isDebugMode then return end
-    for _, option in pairs(debugMenu) do
+    if not DebugMode then return end
+    for _, option in pairs(DebugMenu) do
         local _mainMenu = context:addOptionOnTop(option.DisplayName or "Error", worldObjects, function() option.func() end)
         if option.texture then
             _mainMenu.iconTexture = getTexture(option.texture)
